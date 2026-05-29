@@ -254,6 +254,196 @@ footer{background:var(--navy3);padding:30px 5%}
 .flg-n{font-size:14px;font-weight:700;color:rgba(255,255,255,.8)}
 .flg-s{font-size:9px;color:rgba(255,255,255,.32);letter-spacing:.1em;text-transform:uppercase}
 .foot-copy{font-size:11.5px;color:rgba(255,255,255,.28)}
+
+/* ══════════════════════════════════════════
+   MOBILE & RESPONSIVE — full device support
+   Breakpoints: 1024px tablet · 768px large-mobile · 480px small mobile
+   ══════════════════════════════════════════ */
+
+/* ── NAV HAMBURGER ── */
+.nav-hamburger{display:none;flex-direction:column;justify-content:center;gap:5px;width:40px;height:40px;background:none;border:none;cursor:pointer;padding:6px;border-radius:var(--r-sm)}
+.nav-hamburger span{display:block;height:2px;background:var(--navy);border-radius:2px;transition:all .25s}
+.nav-hamburger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.nav-hamburger.open span:nth-child(2){opacity:0;transform:scaleX(0)}
+.nav-hamburger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+.nav-mobile-overlay{display:none;position:fixed;inset:66px 0 0 0;background:rgba(255,255,255,.99);backdrop-filter:blur(12px);z-index:199;overflow-y:auto;border-top:1px solid var(--gray-b);padding:20px 5% 40px;flex-direction:column;gap:0}
+.nav-mobile-overlay.open{display:flex}
+.nav-mobile-overlay a{font-size:16px;color:var(--text);text-decoration:none;padding:14px 0;border-bottom:1px solid var(--gray-b);font-weight:500}
+.nav-mobile-overlay a:last-child{border-bottom:none}
+.nav-mobile-cta{display:flex;gap:10px;flex-wrap:wrap;margin-top:20px;padding-top:20px;border-top:1px solid var(--gray-b)}
+
+@media(max-width:1024px){
+  /* NAV */
+  .nav-links{display:none}
+  .nav-cta{display:none}
+  .nav-hamburger{display:flex}
+
+  /* HERO */
+  .hero{padding:60px 0 52px}
+  .hero-in{grid-template-columns:1fr;gap:40px}
+  .hdash{order:2}
+  .hero h1,.h1{font-size:clamp(32px,6vw,52px)}
+
+  /* ABOUT */
+  .about-grid{grid-template-columns:1fr;gap:36px}
+
+  /* PLATFORM */
+  .platform-grid{grid-template-columns:1fr;border-radius:var(--r-lg)}
+  .plat-col:first-child{border-radius:var(--r-lg) var(--r-lg) 0 0}
+  .plat-col:last-child{border-radius:0 0 var(--r-lg) var(--r-lg)}
+  .plat-col:not(:first-child):not(:last-child){border-radius:0}
+
+  /* ROLE GRID */
+  .role-grid{grid-template-columns:1fr 1fr}
+
+  /* HOW IT WORKS */
+  .workflow-outer{grid-template-columns:1fr;gap:40px}
+  .workflow-outer > div:first-child{position:static}
+  .ae-grid{grid-template-columns:1fr}
+
+  /* MODULES */
+  .modules-grid{grid-template-columns:repeat(2,1fr)}
+  .modules-grid .mod-card[style*="span 2"]{grid-column:span 2}
+
+  /* ENTERPRISE KPIs */
+  .ent-kpis{grid-template-columns:repeat(3,1fr)}
+  .pipe{grid-template-columns:repeat(3,1fr)}
+
+  /* SME ROLES */
+  div[style*="repeat(4,1fr)"]{grid-template-columns:repeat(2,1fr)!important}
+
+  /* DIFF */
+  .diff-grid{grid-template-columns:1fr 1fr}
+
+  /* MVP */
+  div.wrap > div[style*="grid-template-columns:1fr 1fr;gap:64px"]{grid-template-columns:1fr!important;gap:40px!important}
+
+  /* PRICING */
+  .price-grid{grid-template-columns:1fr}
+  .price-card.feat{order:-1}
+
+  /* FOOTER */
+  .foot-in{flex-direction:column;align-items:flex-start;gap:14px;text-align:left}
+}
+
+@media(max-width:768px){
+  .sec{padding:60px 0}
+  .wrap{padding:0 4%}
+
+  /* HERO */
+  .hero{padding:48px 0 44px}
+  .hero-in{padding:0 4%}
+  .hero-btns{flex-direction:column;gap:10px}
+  .hero-btns .btn{width:100%;justify-content:center;text-align:center}
+  .hero-pills{gap:6px}
+
+  /* GRIDS → SINGLE COLUMN */
+  .role-grid{grid-template-columns:1fr}
+  .sme-grid{grid-template-columns:1fr}
+  .diff-grid{grid-template-columns:1fr}
+  .g2,.g3,.g4{grid-template-columns:1fr}
+  .mvp-grid{grid-template-columns:1fr}
+  .mvp-card[style*="span 2"]{grid-column:span 1!important}
+  .modules-grid{grid-template-columns:1fr}
+  .modules-grid .mod-card[style*="span 2"]{grid-column:span 1}
+  div[style*="grid-template-columns:1fr 1fr"][style*="mod-fns"]{grid-template-columns:1fr!important}
+
+  /* SME ROLES PANEL */
+  div[style*="repeat(4,1fr)"]{grid-template-columns:1fr 1fr!important}
+
+  /* ENTERPRISE */
+  .ent-kpis{grid-template-columns:repeat(2,1fr)}
+  .pipe{grid-template-columns:repeat(2,1fr);gap:6px}
+
+  /* CANDIDATE ROWS */
+  .tc{flex-wrap:wrap;gap:8px}
+  .score-wrap{min-width:auto;width:100%}
+  .tc > .btn{width:100%;justify-content:center;margin-top:4px}
+
+  /* CODE BLOCK */
+  .code-block{font-size:11px;word-break:break-word}
+
+  /* hd-stats: keep 2 cols */
+  .hd-stats{grid-template-columns:repeat(2,1fr)}
+
+  /* CTA BUTTONS */
+  .cta-btns{flex-direction:column;align-items:center;gap:10px}
+  .cta-btns .btn{width:100%;max-width:320px;justify-content:center}
+  .cta-h{font-size:clamp(24px,5vw,36px)}
+  .cta-in{padding:0 5%}
+
+  /* ASSESSMENT ENV */
+  .assess-env{padding:18px}
+  .ae-grid{grid-template-columns:1fr;gap:10px}
+
+  /* PLATFORM COLS */
+  .plat-col{padding:24px 20px}
+
+  /* ABOUT nav dark box */
+  div[style*="navy3"][style*="24px 26px"]{padding:18px 20px!important}
+  div[style*="navy3"][style*="24px"]{padding:18px 20px!important}
+
+  /* Module 07 inner grid */
+  div[style*="grid-template-columns:1fr 1fr"][style*="gap:8px;margin-top:10px"]{grid-template-columns:1fr!important}
+
+  /* FOOTER */
+  .foot-copy{font-size:11px;line-height:1.5}
+
+  /* H2 */
+  .h2{font-size:clamp(22px,5vw,32px)}
+}
+
+@media(max-width:480px){
+  .wrap{padding:0 16px}
+  .hero-in{padding:0 16px}
+
+  /* NAV */
+  .nav-in{padding:0 16px}
+  .nlg-n{font-size:15px}
+
+  /* TYPOGRAPHY */
+  .h1{font-size:30px}
+  .h2{font-size:22px}
+  .lead{font-size:14.5px}
+
+  /* HERO DASH */
+  .hdash{padding:18px}
+  .hd-stats{grid-template-columns:repeat(2,1fr);gap:6px}
+  .hd-sn{font-size:18px}
+  div[style*="grid-template-columns:repeat(3,1fr);gap:7px"]{grid-template-columns:repeat(3,1fr)!important;gap:5px}
+
+  /* ENTERPRISE */
+  .ent-kpis{grid-template-columns:repeat(2,1fr);gap:8px}
+  .pipe{grid-template-columns:repeat(2,1fr);gap:6px}
+  .pipe-s:last-child{grid-column:span 2}
+  .ent-dash{padding:18px}
+
+  /* SME roles 4-col → 1-col */
+  div[style*="repeat(4,1fr)"]{grid-template-columns:1fr!important}
+
+  /* BUTTONS */
+  .btn{font-size:13px;padding:10px 18px}
+
+  /* PRICE */
+  .price-card{padding:22px 18px}
+
+  /* FOOTER */
+  .foot-in{gap:10px}
+  .foot-copy{font-size:10.5px}
+
+  /* CTA */
+  .cta-sec{padding:60px 0}
+
+  /* TIMELINE */
+  .tl-step{grid-template-columns:44px 1fr;gap:12px}
+  .tl-num{width:34px;height:34px;font-size:13px}
+
+  /* ROLE CARDS */
+  .role-card{padding:18px}
+
+  /* PROB ITEMS */
+  .prob-item{padding:12px 14px}
+}
 </style>
 </head>
 <body>
@@ -282,8 +472,27 @@ footer{background:var(--navy3);padding:30px 5%}
       <a href="#jobs" class="btn btn-out" style="font-size:13px;padding:8px 16px">Find jobs</a>
       <a href="#" class="btn btn-navy" style="font-size:13px;padding:8px 16px">Post requirement</a>
     </div>
+    <button class="nav-hamburger" id="navHamburger" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
   </div>
 </nav>
+
+<!-- MOBILE NAV OVERLAY -->
+<div class="nav-mobile-overlay" id="navOverlay" role="navigation" aria-label="Mobile navigation">
+  <a href="#about" class="nav-mob-link">About</a>
+  <a href="#platform" class="nav-mob-link">Platform</a>
+  <a href="#roles" class="nav-mob-link">Ecosystems</a>
+  <a href="#how" class="nav-mob-link">How it works</a>
+  <a href="#modules" class="nav-mob-link">Modules</a>
+  <a href="#sme" class="nav-mob-link">SME network</a>
+  <a href="#enterprise" class="nav-mob-link">Enterprise</a>
+  <a href="#pricing" class="nav-mob-link">Pricing</a>
+  <div class="nav-mobile-cta">
+    <a href="#jobs" class="btn btn-out" style="flex:1;justify-content:center">Find jobs</a>
+    <a href="#" class="btn btn-navy" style="flex:1;justify-content:center">Post requirement</a>
+  </div>
+</div>
 
 <!-- ═══════════════ HERO ═══════════════ -->
 <section class="hero">
@@ -628,7 +837,7 @@ footer{background:var(--navy3);padding:30px 5%}
       <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:14px;text-align:center">
         <div><div style="font-size:24px;font-weight:700;color:var(--navy);margin-bottom:4px">Reviewer (Assessment)</div><div style="font-size:14.5px;color:var(--text-m)">Review submissions against standardised rubrics.<br> <i> Earn per review. </i></div></div>
         <div><div style="font-size:24px;font-weight:700;color:var(--navy);margin-bottom:4px">Contributor (Blueprint)</div><div style="font-size:14.5px;color:var(--text-m)">Author assessment challenges and evaluation frameworks. <br> <i>Earn royalties.</i></div></div>
-        <div><div style="font-size:24px;font-weight:700;color:var(--navy);margin-bottom:4px">Panel (Interview)</div><div style="font-size:14.5px;color:var(--text-m)">Join live screening panels as an expert evaluator. <i>Earn panel fees.</i></div></div>
+        <div><div style="font-size:24px;font-weight:700;color:var(--navy);margin-bottom:4px">Panel <br> (Interview)</div><div style="font-size:14.5px;color:var(--text-m)">Join live screening panels as an expert evaluator. <br> <i>Earn panel fees.</i></div></div>
         <div><div style="font-size:24px;font-weight:700;color:var(--navy);margin-bottom:4px">Advisor (Benchmark)</div><div style="font-size:14.5px;color:var(--text-m)">Shape industry skill standards and platform benchmarks. <br><i> Strategic role.</i></div></div>
       </div>
     </div>
@@ -839,5 +1048,30 @@ footer{background:var(--navy3);padding:30px 5%}
   </div>
 </footer>
 
+<script>
+(function(){
+  var btn = document.getElementById('navHamburger');
+  var overlay = document.getElementById('navOverlay');
+  if(!btn || !overlay) return;
+  function close(){
+    btn.classList.remove('open');
+    overlay.classList.remove('open');
+    btn.setAttribute('aria-expanded','false');
+    document.body.style.overflow='';
+  }
+  btn.addEventListener('click',function(){
+    var isOpen = overlay.classList.toggle('open');
+    btn.classList.toggle('open', isOpen);
+    btn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    document.body.style.overflow = isOpen ? 'hidden' : '';
+  });
+  overlay.querySelectorAll('a').forEach(function(a){
+    a.addEventListener('click', close);
+  });
+  window.addEventListener('resize',function(){
+    if(window.innerWidth > 1024) close();
+  });
+})();
+</script>
 </body>
 </html>
