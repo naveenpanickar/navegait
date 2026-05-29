@@ -297,9 +297,11 @@ footer{background:var(--navy3);padding:30px 5%}
   .role-grid{grid-template-columns:1fr 1fr}
 
   /* HOW IT WORKS */
-  .workflow-outer{grid-template-columns:1fr;gap:40px}
-  .workflow-outer > div:first-child{position:static}
+  .workflow-outer{grid-template-columns:1fr;gap:32px}
+  .workflow-outer > div:first-child{position:static!important;top:auto!important}
   .ae-grid{grid-template-columns:1fr}
+  .tl-step{min-width:0}
+  .tl-body{min-width:0}
 
   /* MODULES */
   .modules-grid{grid-template-columns:repeat(2,1fr)}
@@ -372,9 +374,25 @@ footer{background:var(--navy3);padding:30px 5%}
   .cta-h{font-size:clamp(24px,5vw,36px)}
   .cta-in{padding:0 5%}
 
-  /* ASSESSMENT ENV */
-  .assess-env{padding:18px}
+  /* HOW IT WORKS — WORKFLOW SECTION */
+  /* Left sticky panel: unstick inline style, control padding */
+  .workflow-outer > div[style*="position:sticky"]{position:static!important;top:auto!important}
+  .workflow-outer > div[style*="sticky"] > div[style]{padding:16px!important;overflow:hidden}
+  /* Assessment env */
+  .assess-env{padding:16px}
+  .ae-hdr{flex-wrap:wrap;gap:6px}
+  .ae-title{font-size:12px}
   .ae-grid{grid-template-columns:1fr;gap:10px}
+  .ae-panel{padding:12px}
+  /* Timeline steps */
+  .tl-step{grid-template-columns:40px 1fr;gap:10px;min-width:0}
+  .tl-body{min-width:0;overflow:hidden;word-break:break-word}
+  .tl-title{font-size:14.5px;word-break:break-word}
+  .tl-desc{font-size:12.5px;word-break:break-word}
+  /* Code blocks inside timeline */
+  .tl-body .code-block{overflow-x:auto;word-break:break-all;padding:12px 14px;font-size:10.5px;line-height:1.7}
+  /* Wrapper dark box padding */
+  .workflow-outer div[style*="navy3"][style*="22px 24px"]{padding:16px!important}
 
   /* PLATFORM COLS */
   .plat-col{padding:24px 20px}
@@ -435,8 +453,18 @@ footer{background:var(--navy3);padding:30px 5%}
   .cta-sec{padding:60px 0}
 
   /* TIMELINE */
-  .tl-step{grid-template-columns:44px 1fr;gap:12px}
-  .tl-num{width:34px;height:34px;font-size:13px}
+  /* HOW IT WORKS timeline — small phones */
+  .tl-step{grid-template-columns:36px 1fr;gap:8px;min-width:0}
+  .tl-body{min-width:0;overflow:hidden}
+  .tl-num{width:30px;height:30px;font-size:12px;flex-shrink:0}
+  .tl-title{font-size:13.5px}
+  .tl-desc{font-size:12px}
+  .tl-body .code-block{font-size:10px;padding:10px 12px;overflow-x:auto;word-break:break-all}
+  .ae-panel{padding:10px}
+  .ae-lbl{font-size:9.5px}
+  .ae-text{font-size:11.5px}
+  .ae-ck{font-size:11px}
+  .ae-timer{font-size:12px}
 
   /* ROLE CARDS */
   .role-card{padding:18px}
