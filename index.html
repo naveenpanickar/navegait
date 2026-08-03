@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="NAVEGAIT Enterprise Partnering Experience (EPX) — a concept ˈbluːprɪnt for a unified platform to discover, onboard, manage and grow trusted partner ecosystems for enterprises and SMEs.">
+<meta name="description" content="NAVEGAIT EPX — the Enterprise Partnering Experience. A concept ˈbluːprɪnt for a unified platform to discover, onboard, govern, execute, measure and grow trusted partner ecosystems for enterprises and SMEs.">
 <title>NAVEGAIT EPX — Enterprise Partnering Experience · Concept ˈBluːprɪnt</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -390,6 +390,25 @@ footer{padding:36px 0}
 .foot-bottom{margin-top:40px;padding-top:20px;border-top:1px solid var(--line);
   display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;font-size:12px;color:var(--ink-faint)}
 
+/* ============================================================ SOLUTIONS BY BUSINESS FUNCTION */
+.solutions-grid{margin-top:8px}
+.solution-card{padding:22px}
+.solution-card h3{font-size:15px;margin-bottom:12px;color:var(--navy)}
+.solution-card .who-tags span{font-size:11.5px}
+
+/* ============================================================ INDUSTRIES */
+.industries-strip{margin-top:8px;display:flex;flex-wrap:wrap;gap:10px}
+.industries-strip span{font-family:var(--mono);font-size:12px;border:1px solid var(--line-strong);
+  border-radius:999px;padding:9px 16px;color:var(--navy);background:#fff;font-weight:600}
+
+/* ============================================================ AI PARTNER INTELLIGENCE */
+.ai-grid{margin-top:8px}
+.ai-card{padding:20px;display:flex;gap:12px;align-items:flex-start}
+.ai-card .ico{width:26px;height:26px;flex-shrink:0;color:var(--teal);margin-top:2px}
+.ai-card .ico svg{width:100%;height:100%;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+.ai-card h4{font-size:14px;color:var(--navy);margin-bottom:3px}
+.ai-card p{font-size:12.5px}
+
 /* ============================================================ SCROLL REVEAL */
 .reveal{opacity:0;transform:translateY(14px);transition:opacity .55s ease, transform .55s ease}
 .reveal.in{opacity:1;transform:translateY(0)}
@@ -440,6 +459,8 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--teal);outline-offse
     </a>
     <nav class="links" aria-label="Primary">
       <a href="#why">Why</a>
+      <a href="#positioning">Category</a>
+      <a href="#solutions">Solutions</a>
       <a href="#lifecycle">How It Works</a>
       <a href="#workspaces">Workspaces</a>
       <a href="#model">Model</a>
@@ -454,11 +475,15 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--teal);outline-offse
 </header>
 <nav class="mobile-nav" id="mobileNav" aria-label="Mobile">
   <a href="#why">Why NAVEGAIT</a>
+  <a href="#positioning">Category positioning</a>
   <a href="#what">What we're building</a>
+  <a href="#solutions">Solutions by function</a>
   <a href="#lifecycle">Lifecycle</a>
   <a href="#workspaces">Workspaces</a>
   <a href="#model">Model</a>
+  <a href="#ai">AI intelligence</a>
   <a href="#roadmap">Roadmap</a>
+  <a href="#industries">Industries</a>
   <a href="#team">Team</a>
   <a href="#team">Join the Founding Team</a>
 </nav>
@@ -471,8 +496,8 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--teal);outline-offse
   <div class="wrap hero-grid">
     <div class="reveal">
       <span class="stamp"><span class="dot"></span> CONCEPT ˈBLUːPRINT — REV 1.0</span>
-      <h1>A ˈbluːprɪnt for<br><span class="accent">trusted partner ecosystems.</span></h1>
-      <p class="lead">NAVEGAIT EPX is a unified platform to discover, onboard, manage and grow trusted partner ecosystems — pairing a managed Partner Office with a lightweight workspace for enterprises and the SMEs they work with.</p>
+      <h1>Enterprise Partnering Experience.<br><span class="accent">Reimagined.</span></h1>
+      <p class="lead">NAVEGAIT EPX is a unified platform to discover, onboard, govern, execute, measure and grow your entire partner ecosystem — vendors, agencies, institutions, consultants and service providers — pairing a managed Partner Office with a lightweight workspace for enterprises and the SMEs they work with.</p>
       <div class="hero-actions">
         <a class="btn primary" href="#team">Join the Founding Team</a>
         <a class="btn outline" href="#lifecycle">See How It Works</a>
@@ -547,6 +572,39 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--teal);outline-offse
   </div>
 </section>
 
+<!-- ============================================================ CATEGORY POSITIONING -->
+<section id="positioning">
+  <div class="wrap">
+    <div class="center-head reveal">
+      <div class="eyebrow alt">Category positioning</div>
+      <h2>A category of its own: Enterprise Partnering Experience</h2>
+      <p class="lead">EPX isn't a bolt-on to existing enterprise systems — it's the operating layer for how organizations discover, onboard, govern, execute, measure and grow their entire partner ecosystem, end to end.</p>
+    </div>
+    <div class="grid grid-4 problem-grid reveal">
+      <div class="card problem-card">
+        <div class="ico"><svg viewBox="0 0 24 24"><circle cx="10" cy="10" r="6"/><line x1="14.5" y1="14.5" x2="21" y2="21"/></svg></div>
+        <h3>Partner 360</h3>
+        <p>One live view of every partner relationship, across every business unit.</p>
+      </div>
+      <div class="card problem-card">
+        <div class="ico"><svg viewBox="0 0 24 24"><path d="M20 11a8 8 0 0 0-14-5l-2 2"/><path d="M4 4v4h4"/><path d="M4 13a8 8 0 0 0 14 5l2-2"/><path d="M20 20v-4h-4"/></svg></div>
+        <h3>Partner Lifecycle</h3>
+        <p>Discover, evaluate, onboard, engage, deliver, monitor, renew and grow — one connected flow.</p>
+      </div>
+      <div class="card problem-card">
+        <div class="ico"><svg viewBox="0 0 24 24"><circle cx="8" cy="7" r="3"/><circle cx="16" cy="7" r="3"/><path d="M2 20c0-4 3-6 6-6M22 20c0-4-3-6-6-6"/></svg></div>
+        <h3>Partner Workspaces</h3>
+        <p>Enterprise and partner each get a workspace built around what they need to do.</p>
+      </div>
+      <div class="card problem-card">
+        <div class="ico"><svg viewBox="0 0 24 24"><path d="M12 2l3 7h7l-5.5 4.5L18.5 21 12 16.5 5.5 21l2-7.5L2 9h7z"/></svg></div>
+        <h3>AI for Partner Success</h3>
+        <p>Recommendations, risk flags and performance insight built into every workflow.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- ============================================================ WHAT WE'RE BUILDING -->
 <section id="what" class="tinted solution">
   <div class="wrap grid grid-2" style="align-items:flex-start">
@@ -606,6 +664,43 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--teal);outline-offse
     <div class="impact-strip reveal">
       <span>Marketing &amp; Comms</span><span>IT &amp; Digital Services</span><span>Learning &amp; Talent</span>
       <span>Facilities &amp; Operations</span><span>Manufacturing &amp; Supply Chain</span><span>Retail &amp; Franchise</span>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================ SOLUTIONS BY BUSINESS FUNCTION -->
+<section id="solutions">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="eyebrow">Solutions by business function</div>
+      <h2>Every category of partner, one platform</h2>
+      <p class="lead">NAVEGAIT EPX organizes around the categories of partners enterprises actually manage — so every business unit finds a home for the relationships it owns.</p>
+    </div>
+    <div class="grid grid-3 solutions-grid reveal">
+      <div class="card solution-card">
+        <h3>Marketing &amp; Brand Partnerships</h3>
+        <div class="who-tags"><span>Agencies</span><span>Printing</span><span>Packaging</span><span>Events</span><span>Promotions</span></div>
+      </div>
+      <div class="card solution-card">
+        <h3>Corporate Services</h3>
+        <div class="who-tags"><span>Facility mgmt</span><span>Security</span><span>Housekeeping</span><span>Travel</span><span>Administration</span></div>
+      </div>
+      <div class="card solution-card">
+        <h3>Technology Partners</h3>
+        <div class="who-tags"><span>Software</span><span>Infrastructure</span><span>AI</span><span>Cloud</span><span>Data engineering</span></div>
+      </div>
+      <div class="card solution-card">
+        <h3>Talent &amp; Education</h3>
+        <div class="who-tags"><span>Universities</span><span>Staffing</span><span>Internship programs</span><span>Skill development</span></div>
+      </div>
+      <div class="card solution-card">
+        <h3>CSR &amp; ESG</h3>
+        <div class="who-tags"><span>NGOs</span><span>Foundations</span><span>Community programs</span></div>
+      </div>
+      <div class="card solution-card">
+        <h3>Manufacturing &amp; Supply Chain</h3>
+        <div class="who-tags"><span>Suppliers</span><span>Logistics</span><span>Quality partners</span></div>
+      </div>
     </div>
   </div>
 </section>
@@ -812,22 +907,40 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--teal);outline-offse
   </div>
 </section>
 
-<!-- ============================================================ PLATFORM CAPABILITIES -->
+<!-- ============================================================ PLATFORM MODULES -->
 <section>
   <div class="wrap">
     <div class="section-head reveal">
-      <div class="eyebrow">Platform capabilities</div>
-      <h2>Everything the lifecycle needs, in one system</h2>
+      <div class="eyebrow">Platform modules</div>
+      <h2>Six modules. One connected system.</h2>
+      <p class="lead">NAVEGAIT EPX is built from modules that snap together across the full partner lifecycle.</p>
     </div>
-    <div class="grid grid-4 cap-grid reveal">
-      <div class="card cap-card"><div class="ico"><svg viewBox="0 0 24 24"><circle cx="10" cy="10" r="6"/><line x1="14.5" y1="14.5" x2="21" y2="21"/></svg></div><h3>Partner discovery</h3><p>Find and shortlist the right partners fast.</p></div>
-      <div class="card cap-card"><div class="ico"><svg viewBox="0 0 24 24"><rect x="5" y="3" width="14" height="18" rx="2"/><path d="M9 8h6M9 12h6"/></svg></div><h3>Onboarding &amp; contracts</h3><p>Standardized, faster onboarding workflows.</p></div>
-      <div class="card cap-card"><div class="ico"><svg viewBox="0 0 24 24"><path d="M12 2l8 4v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><path d="M9 12l2 2 4-4"/></svg></div><h3>Compliance &amp; risk</h3><p>Policy checks and risk monitoring, built in.</p></div>
-      <div class="card cap-card"><div class="ico"><svg viewBox="0 0 24 24"><circle cx="8" cy="8" r="3"/><circle cx="17" cy="8" r="3"/><path d="M2 21c0-3.5 2.7-6 6-6M14 15c3.3 0 6 2.5 6 6"/></svg></div><h3>Work management</h3><p>Projects, milestones and collaboration.</p></div>
-      <div class="card cap-card"><div class="ico"><svg viewBox="0 0 24 24"><path d="M4 20h16"/><rect x="6" y="12" width="3" height="6"/><rect x="11" y="9" width="3" height="9"/><rect x="16" y="5" width="3" height="13"/></svg></div><h3>Performance dashboards</h3><p>Live SLA, quality and cost visibility.</p></div>
-      <div class="card cap-card"><div class="ico"><svg viewBox="0 0 24 24"><path d="M4 4v16h4V4zM10 10v10h4V10zM16 6v14h4V6z"/></svg></div><h3>Analytics &amp; insights</h3><p>Trends and benchmarks across the ecosystem.</p></div>
-      <div class="card cap-card"><div class="ico"><svg viewBox="0 0 24 24"><path d="M21 15a4 4 0 0 1-4 4H8l-5 3V6a4 4 0 0 1 4-4h10a4 4 0 0 1 4 4z"/></svg></div><h3>Communications &amp; approvals</h3><p>Chat, alerts and configurable routing.</p></div>
-      <div class="card cap-card"><div class="ico"><svg viewBox="0 0 24 24"><path d="M6 2h9l5 5v15H6z"/><path d="M15 2v5h5"/></svg></div><h3>Document repository</h3><p>Centralized, secure and searchable.</p></div>
+    <div class="grid grid-3 cap-grid reveal">
+      <div class="card cap-card"><div class="ico"><svg viewBox="0 0 24 24"><circle cx="10" cy="10" r="6"/><line x1="14.5" y1="14.5" x2="21" y2="21"/></svg></div><h3>EPX Discovery</h3><p>Find and shortlist the right partners, fast.</p></div>
+      <div class="card cap-card"><div class="ico"><svg viewBox="0 0 24 24"><circle cx="8" cy="7" r="3"/><circle cx="16" cy="7" r="3"/><path d="M2 20c0-4 3-6 6-6M22 20c0-4-3-6-6-6"/></svg></div><h3>EPX Onboarding</h3><p>Digital onboarding, KYC, compliance and approvals.</p></div>
+      <div class="card cap-card"><div class="ico"><svg viewBox="0 0 24 24"><path d="M12 2l8 4v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><path d="M9 12l2 2 4-4"/></svg></div><h3>EPX Governance</h3><p>Policies, risk, audit and contracts, built in.</p></div>
+      <div class="card cap-card"><div class="ico"><svg viewBox="0 0 24 24"><rect x="4" y="4" width="7" height="7" rx="1.5"/><rect x="13" y="4" width="7" height="7" rx="1.5"/><rect x="4" y="13" width="7" height="7" rx="1.5"/><rect x="13" y="13" width="7" height="7" rx="1.5"/></svg></div><h3>EPX Workspace</h3><p>Tasks, approvals, documents, projects, communication.</p></div>
+      <div class="card cap-card"><div class="ico"><svg viewBox="0 0 24 24"><path d="M4 20h16"/><rect x="6" y="12" width="3" height="6"/><rect x="11" y="9" width="3" height="9"/><rect x="16" y="5" width="3" height="13"/></svg></div><h3>EPX Intelligence</h3><p>Analytics, KPIs, AI recommendations, partner health score.</p></div>
+      <div class="card cap-card"><div class="ico"><svg viewBox="0 0 24 24"><path d="M12 2l3 7h7l-5.5 4.5L18.5 21 12 16.5 5.5 21l2-7.5L2 9h7z"/></svg></div><h3>EPX Marketplace</h3><p>Discover verified partners, experts and institutions.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================ AI PARTNER INTELLIGENCE -->
+<section id="ai">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="eyebrow grn">AI · future roadmap</div>
+      <h2>AI Partner Intelligence</h2>
+      <p class="lead">Modern platforms increasingly use AI to surface insights and automate work across the lifecycle — EPX Intelligence is built to do the same for partner management.</p>
+    </div>
+    <div class="grid grid-3 ai-grid reveal">
+      <div class="card ai-card"><div class="ico"><svg viewBox="0 0 24 24"><circle cx="10" cy="10" r="6"/><line x1="14.5" y1="14.5" x2="21" y2="21"/></svg></div><div><h4>Best-fit partner matching</h4><p>Recommend the right partner for each need.</p></div></div>
+      <div class="card ai-card"><div class="ico"><svg viewBox="0 0 24 24"><path d="M12 2l8 4v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><path d="M9 12l2 2 4-4"/></svg></div><div><h4>Compliance risk flags</h4><p>Surface risk before it becomes exposure.</p></div></div>
+      <div class="card ai-card"><div class="ico"><svg viewBox="0 0 24 24"><path d="M4 20h16"/><rect x="6" y="12" width="3" height="6"/><rect x="11" y="9" width="3" height="9"/><rect x="16" y="5" width="3" height="13"/></svg></div><div><h4>Performance trends</h4><p>Spot which partners are trending up or down.</p></div></div>
+      <div class="card ai-card"><div class="ico"><svg viewBox="0 0 24 24"><rect x="5" y="3" width="14" height="18" rx="2"/><path d="M9 8h6M9 12h6M9 16h4"/></svg></div><div><h4>Contract renewal alerts</h4><p>Never miss a renewal or expiry window.</p></div></div>
+      <div class="card ai-card"><div class="ico"><svg viewBox="0 0 24 24"><circle cx="6" cy="6" r="2"/><circle cx="18" cy="6" r="2"/><circle cx="12" cy="18" r="2"/><path d="M6 8v4l6 4M18 8v4l-6 4"/></svg></div><div><h4>Opportunity matching</h4><p>Connect partners to the right new opportunities.</p></div></div>
+      <div class="card ai-card"><div class="ico"><svg viewBox="0 0 24 24"><path d="M3 20h18M6 20V10M12 20V4M18 20v-7"/></svg></div><div><h4>Capacity forecasting</h4><p>Anticipate demand before it hits.</p></div></div>
     </div>
   </div>
 </section>
@@ -974,6 +1087,21 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--teal);outline-offse
   </div>
 </section>
 
+<!-- ============================================================ INDUSTRIES -->
+<section id="industries">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="eyebrow">Industries</div>
+      <h2>Built for partner-heavy sectors</h2>
+      <p class="lead">EPX is designed to flex across the sectors where enterprises lean hardest on external partners.</p>
+    </div>
+    <div class="industries-strip reveal">
+      <span>Banking</span><span>Insurance</span><span>Healthcare</span><span>Retail</span>
+      <span>Manufacturing</span><span>Technology</span><span>Education</span><span>Government</span>
+    </div>
+  </div>
+</section>
+
 <!-- ============================================================ FOUNDING TEAM -->
 <section id="team" class="tinted">
   <div class="wrap">
@@ -1052,13 +1180,17 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--teal);outline-offse
       <div class="foot-cols">
         <div class="foot-col">
           <h5>Platform</h5>
+          <a href="#solutions">Solutions</a>
           <a href="#lifecycle">How It Works</a>
           <a href="#workspaces">Workspaces</a>
+          <a href="#ai">AI Intelligence</a>
           <a href="#model">Model</a>
         </div>
         <div class="foot-col">
           <h5>Company</h5>
           <a href="#why">Why NAVEGAIT</a>
+          <a href="#positioning">Category positioning</a>
+          <a href="#industries">Industries</a>
           <a href="#team">Team</a>
           <a href="#roadmap">Roadmap</a>
         </div>
