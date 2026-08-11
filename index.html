@@ -156,7 +156,7 @@ header{position:sticky;top:0;z-index:1000;background:color-mix(in srgb, var(--pa
 .mobile-nav.open{transform:translateY(0);opacity:1;visibility:visible;pointer-events:auto}
 .mobile-nav a{display:flex;justify-content:space-between;padding:16px 4px;border-bottom:1px solid var(--line);font-weight:700;color:var(--navy)}
 [data-theme="dark"] .mobile-nav a{color:#fff}
-body.menu-open{overflow:hidden}
+body.menu-open{overflow:hidden;overscroll-behavior:none}
 
 /* ============================================================ HERO */
 .hero{padding:68px 0 70px}
@@ -642,6 +642,148 @@ footer{padding:64px 0 34px}
   .tour-inline .phone-col{width:100%}
   .phone-mock{width:min(310px,86vw)}
   .tour-caption{margin-bottom:8px}
+}
+
+
+/* ============================================================
+   CROSS-BROWSER + MOBILE COMPATIBILITY HARDENING
+   Safe fallbacks first; modern enhancements second.
+   ============================================================ */
+
+/* Prevent accidental horizontal scrolling from long labels, mockups and grids. */
+html, body{max-width:100%;overflow-x:hidden}
+body{-webkit-text-size-adjust:100%;text-size-adjust:100%}
+button,input,select,textarea{font:inherit;max-width:100%}
+input,select,button{appearance:none;-webkit-appearance:none}
+input[type="email"],input[type="text"],select{min-height:46px}
+select{background-image:linear-gradient(45deg,transparent 50%,currentColor 50%),linear-gradient(135deg,currentColor 50%,transparent 50%);background-position:calc(100% - 17px) 20px,calc(100% - 12px) 20px;background-size:5px 5px,5px 5px;background-repeat:no-repeat;padding-right:34px}
+.workspace-shell,.workspace-body,.wpanel,.wchat-panel,.platform-overview-copy{min-width:0}
+.workspace-topbar,.pod-top,.tour-head,.foot-cta{min-width:0}
+.wlabel{min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.wchat-msg,.wref-list li,.wlist b,.wlist small,.day-body,.lead,p,h1,h2,h3,h4,h5{overflow-wrap:anywhere}
+
+/* Fallbacks for browsers that do not support color-mix/backdrop-filter. */
+header{background:rgba(250,247,241,.96)}
+[data-theme="dark"] header{background:rgba(11,26,34,.96)}
+@supports (background:color-mix(in srgb, red 50%, transparent)){
+  header{background:color-mix(in srgb,var(--paper) 90%,transparent)}
+}
+@supports ((-webkit-backdrop-filter:blur(10px)) or (backdrop-filter:blur(10px))){
+  header{-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px)}
+}
+
+/* Keep decorative mockups inside their containing blocks. */
+.mini-browser{max-width:100%}
+.mini-phone{max-width:100%}
+.phone-mock{max-width:100%}
+.feature-chip{min-width:0}
+
+/* Touch-friendly interactive controls. */
+.btn,.theme-toggle button,.menu-btn,.links a,.mobile-nav a,
+.wcontact-btn,.phone-contact-btn,.faq-item summary{
+  -webkit-tap-highlight-color:transparent;
+}
+@media (hover:none){
+  .btn:hover,.btn.outline:hover,.btn.primary:hover,.btn.dark:hover,
+  .links a:hover,.foot-col a:hover{background:inherit;color:inherit;border-color:inherit}
+}
+
+/* Tablet: give the enterprise workspace enough breathing room. */
+@media (max-width:1020px){
+  .nav{height:72px}
+  .mobile-nav{top:72px;inset-block-start:72px}
+  .hero{padding-top:54px}
+  .hero-grid{gap:34px}
+  .tour-inline{gap:22px}
+  .workspace-body{padding:18px}
+  .wcontact-row{flex-wrap:wrap}
+  .wcontact-btn{flex:1 1 180px}
+  .platform-overview{grid-template-columns:minmax(0,1fr) minmax(300px,.85fr)}
+}
+
+/* Small tablets / large phones. */
+@media (max-width:760px){
+  :root{--pad:clamp(16px,5vw,24px)}
+  .nav{gap:10px}
+  .brand{font-size:17px;min-width:0}
+  .brand .tag{display:none}
+  .header-actions{gap:7px}
+  .theme-toggle button{padding:7px 9px;font-size:11px}
+  .hero{padding:46px 0 54px}
+  .hero h1{font-size:clamp(34px,10vw,48px)}
+  .hero .lead{font-size:16px}
+  .hero-actions{gap:10px}
+  .pod-top{align-items:flex-start}
+  .pod-status{white-space:nowrap}
+  .platform-overview{padding:20px}
+  .workspace-topbar{padding-inline:12px}
+  .workspace-band{padding-inline:12px}
+  .workspace-nav{padding-inline:7px}
+  .wnav-tab{padding-inline:11px}
+  .workspace-body{padding:14px}
+  .wlist li{align-items:flex-start}
+  .wlist>li>span:last-child{white-space:nowrap}
+  .wcal-toprow{align-items:flex-start;gap:10px;flex-wrap:wrap}
+  .wcal-legend{flex-wrap:wrap;gap:7px 10px}
+  .day-item{padding-inline:0}
+  .foot-cta{padding:28px 22px}
+}
+
+/* Phones: eliminate cramped two-column content and keep controls readable. */
+@media (max-width:480px){
+  section{padding:54px 0}
+  .wrap{padding-inline:16px}
+  .nav{height:68px}
+  .mobile-nav{top:68px;inset-block-start:68px;padding-inline:16px}
+  .header-actions .theme-toggle button{font-size:10px;padding:7px 8px}
+  .menu-btn{width:40px;height:40px;flex:0 0 40px}
+  .hero{padding:38px 0 44px}
+  .hero .stamp{font-size:10px;max-width:100%;white-space:normal}
+  .hero-actions{display:grid;grid-template-columns:1fr;width:100%}
+  .hero-actions .btn{width:100%}
+  .social-proof{align-items:flex-start}
+  .social-proof p{font-size:13px}
+  .avatar-stack span{width:34px;height:34px}
+  .pod-top{padding:15px}
+  .pod-people,.pod-feed{padding-inline:15px}
+  .pod-actions{padding-inline:15px;flex-direction:column}
+  .pod-actions .btn{width:100%}
+  .workspace-body{padding:12px}
+  .wstats{grid-template-columns:1fr}
+  .wtwocol{grid-template-columns:1fr!important}
+  .wpanel{padding:13px}
+  .wcontact-row{display:grid;grid-template-columns:1fr}
+  .wcontact-btn{width:100%;flex:auto}
+  .feature-strip{grid-template-columns:1fr}
+  .feature-chip{padding:14px}
+  .tour-head{align-items:flex-start}
+  .tour-head h3{font-size:17px}
+  .tour-role{font-size:9.5px}
+  .phone-mock{width:min(286px,88vw)}
+  .phone-body{min-height:330px}
+  .phone-week-strip{gap:2px}
+  .phone-week-day{font-size:7.5px;padding-inline:1px}
+  .phone-week-day b{font-size:12px}
+  .phone-tab{padding-inline:1px}
+  .phone-tab span{font-size:7px}
+  .form-card{padding:22px 18px}
+  .pilot-counter{align-items:flex-start;flex-wrap:wrap}
+  .foot-cta{align-items:stretch}
+  .foot-cta .btn{width:100%}
+  .foot-bottom{flex-direction:column}
+}
+
+/* Very narrow devices (320–360px). */
+@media (max-width:360px){
+  .header-actions{gap:4px}
+  .theme-toggle button{padding-inline:6px}
+  .brand .mark{width:30px;height:30px}
+  .brand{font-size:16px}
+  .hero h1{font-size:32px}
+  .lead{font-size:15px}
+  .workspace-band{font-size:9.5px}
+  .wnav-tab{padding-inline:9px;font-size:10px}
+  .phone-mock{width:92vw}
 }
 
 </style>
@@ -1449,10 +1591,14 @@ footer{padding:64px 0 34px}
   var darkBtn = document.getElementById('darkBtn');
   function setTheme(t){
     root.setAttribute('data-theme', t);
-    lightBtn.classList.toggle('active', t === 'light');
-    darkBtn.classList.toggle('active', t === 'dark');
-    lightBtn.setAttribute('aria-pressed', t === 'light');
-    darkBtn.setAttribute('aria-pressed', t === 'dark');
+    if(lightBtn){
+      lightBtn.classList.toggle('active', t === 'light');
+      lightBtn.setAttribute('aria-pressed', t === 'light');
+    }
+    if(darkBtn){
+      darkBtn.classList.toggle('active', t === 'dark');
+      darkBtn.setAttribute('aria-pressed', t === 'dark');
+    }
     try{ localStorage.setItem('navegait-theme', t); }catch(e){}
   }
   var saved = null;
@@ -1462,43 +1608,50 @@ footer{padding:64px 0 34px}
   } else {
     setTheme('light');
   }
-  lightBtn.addEventListener('click', function(){ setTheme('light'); });
-  darkBtn.addEventListener('click', function(){ setTheme('dark'); });
+  if(lightBtn){ lightBtn.addEventListener('click', function(){ setTheme('light'); }); }
+  if(darkBtn){ darkBtn.addEventListener('click', function(){ setTheme('dark'); }); }
 
   // ---- mobile menu ----
   var menuBtn = document.getElementById('menuBtn');
   var mobileNav = document.getElementById('mobileNav');
   function closeMenu(){
+    if(!mobileNav || !menuBtn){ return; }
     mobileNav.classList.remove('open');
     menuBtn.classList.remove('is-open');
     menuBtn.setAttribute('aria-expanded','false');
     menuBtn.setAttribute('aria-label','Open menu');
     document.body.classList.remove('menu-open');
   }
-  menuBtn.addEventListener('click', function(){
-    var isOpen = mobileNav.classList.toggle('open');
-    menuBtn.classList.toggle('is-open', isOpen);
-    menuBtn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
-    menuBtn.setAttribute('aria-label', isOpen ? 'Close menu' : 'Open menu');
-    document.body.classList.toggle('menu-open', isOpen);
-  });
-  mobileNav.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', closeMenu); });
+  if(menuBtn && mobileNav){
+    menuBtn.addEventListener('click', function(){
+      var isOpen = mobileNav.classList.toggle('open');
+      menuBtn.classList.toggle('is-open', isOpen);
+      menuBtn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+      menuBtn.setAttribute('aria-label', isOpen ? 'Close menu' : 'Open menu');
+      document.body.classList.toggle('menu-open', isOpen);
+    });
+    var mobileLinks = mobileNav.querySelectorAll('a');
+    for(var i=0;i<mobileLinks.length;i++){ mobileLinks[i].addEventListener('click', closeMenu); }
+  }
 
   // ---- scroll reveal ----
-  var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var reduceMotion = window.matchMedia ? window.matchMedia('(prefers-reduced-motion: reduce)').matches : false;
   var revealEls = document.querySelectorAll('.reveal');
+  function revealAll(){
+    for(var r=0;r<revealEls.length;r++){ revealEls[r].classList.add('in'); }
+  }
   if(reduceMotion || !('IntersectionObserver' in window)){
-    revealEls.forEach(function(el){ el.classList.add('in'); });
+    revealAll();
   } else {
     var io = new IntersectionObserver(function(entries){
-      entries.forEach(function(entry){
-        if(entry.isIntersecting){
-          entry.target.classList.add('in');
-          io.unobserve(entry.target);
+      for(var e=0;e<entries.length;e++){
+        if(entries[e].isIntersecting){
+          entries[e].target.classList.add('in');
+          io.unobserve(entries[e].target);
         }
-      });
+      }
     }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
-    revealEls.forEach(function(el){ io.observe(el); });
+    for(var o=0;o<revealEls.length;o++){ io.observe(revealEls[o]); }
   }
 
   // ---- footer year ----
