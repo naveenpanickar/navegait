@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="NAVEGAIT EPX — Enterprise Partnering Experience for colleges and institutions to build structured partnerships with enterprises, powered by a managed Partner Office.">
-<title>NAVEGAIT EPX — Enterprise Partnering Experience</title>
+<meta name="description" content="NAVEGAIT EPX — Enterprise Partnering Experience-Reimagined.">
+<title>Enterprise Partnering Experience-Reimagined</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
@@ -153,9 +153,46 @@ body{overflow-x:hidden}
 .links a:hover{color:var(--navy);background:var(--paper-dim)}
 [data-theme="dark"] .links a:hover{color:#fff}
 .header-actions{display:flex;align-items:center;gap:12px}
-.theme-toggle{display:flex;align-items:center;background:var(--paper-dim);border:1px solid var(--line);border-radius:999px;padding:3px;gap:2px}
-.theme-toggle button{border:none;background:transparent;font-family:var(--body);font-weight:700;font-size:12px;padding:7px 12px;border-radius:999px;cursor:pointer;color:var(--ink-faint);display:flex;align-items:center;gap:6px}
+.theme-toggle{
+  display:flex;
+  align-items:center;
+  background:var(--paper-dim);
+  border:1px solid var(--line);
+  border-radius:999px;
+  padding:3px;
+  gap:2px;
+}
+.theme-toggle button{
+  border:none;
+  background:transparent;
+  font-family:var(--body);
+  font-weight:700;
+  font-size:12px;
+  padding:7px 11px;
+  border-radius:999px;
+  cursor:pointer;
+  color:var(--ink-faint);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:6px;
+  min-width:68px;
+  transition:background .18s ease,color .18s ease,box-shadow .18s ease;
+}
+.theme-toggle button:hover{color:var(--navy);background:rgba(255,255,255,.42)}
+[data-theme="dark"] .theme-toggle button:hover{color:#fff;background:rgba(255,255,255,.06)}
 .theme-toggle button.active{background:var(--navy);color:#fff;box-shadow:0 1px 2px rgba(0,0,0,.12)}
+.theme-icon{
+  width:14px;
+  height:14px;
+  flex:0 0 14px;
+  fill:none;
+  stroke:currentColor;
+  stroke-width:1.8;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+}
+.theme-toggle button span{line-height:1}
 .menu-btn{display:none;width:42px;height:42px;border:1px solid var(--line-strong);background:var(--card);border-radius:10px;align-items:center;justify-content:center;cursor:pointer;color:var(--navy)}
 [data-theme="dark"] .menu-btn{color:#fff}
 .menu-btn span{display:block;width:18px;height:2px;background:currentColor;position:relative;transition:background .2s ease, transform .2s ease}
@@ -871,6 +908,131 @@ footer{padding:64px 0 34px}
   .route-card{padding:13px}
 }
 
+
+
+/* ============================================================
+   FINAL READABILITY + MOCK SCREEN TYPE SCALE
+   Dark-mode-safe Partner Office content and one consistent
+   typography hierarchy across Enterprise/Partner mock screens.
+   ============================================================ */
+[data-theme="dark"] #team,
+[data-theme="dark"] #team .office-shot{
+  color:var(--ink);
+}
+[data-theme="dark"] #team .office-shot{
+  background:var(--card);
+  border-color:var(--line);
+}
+[data-theme="dark"] #team .office-shot .workspace-mini{
+  background:var(--card);
+  border-color:var(--line-strong)!important;
+}
+[data-theme="dark"] #team .office-shot .workspace-mini > div:first-child{
+  color:#fff!important;
+}
+[data-theme="dark"] #team .office-shot .workspace-mini > div:nth-child(2){
+  background:var(--card)!important;
+}
+[data-theme="dark"] #team .office-shot .workspace-mini b{
+  color:#fff!important;
+}
+[data-theme="dark"] #team .office-shot .workspace-mini span,
+[data-theme="dark"] #team .office-shot .workspace-mini > div:nth-child(2) > div:last-child{
+  color:var(--ink-soft)!important;
+}
+[data-theme="dark"] #team .capability-list span{
+  background:var(--card);
+  border-color:var(--line-strong);
+  color:var(--ink);
+}
+[data-theme="dark"] #team .cap-icon{
+  color:#E3B871;
+}
+
+/* Shared mock-screen type scale */
+.workspace-shell,
+.phone-mock,
+.mini-browser,
+.mini-phone{
+  font-family:var(--body);
+}
+.workspace-shell .mock-brand,
+.phone-mock .mock-brand{font-size:12px!important;line-height:1.2}
+.workspace-shell .wlabel{font-size:10px!important;line-height:1.2}
+.workspace-shell .workspace-band{font-size:10px!important;line-height:1.25}
+.workspace-shell .workspace-band small{font-size:10px!important;line-height:1.25}
+.workspace-shell .wnav-tab{font-size:10px!important;line-height:1.25}
+.workspace-shell .wstat b{font-size:18px!important;line-height:1.15}
+.workspace-shell .wstat span{font-size:10.5px!important;line-height:1.3}
+.workspace-shell .wstat em{font-size:9.5px!important;line-height:1.25}
+.workspace-shell .wpanel h5{font-size:10px!important;line-height:1.25}
+.workspace-shell .wlegend div{font-size:10.5px!important;line-height:1.3}
+.workspace-shell .wlist li,
+.workspace-shell .wlist b{font-size:11.5px!important;line-height:1.35}
+.workspace-shell .wlist small,
+.workspace-shell .wlist>li>span:last-child{font-size:10px!important;line-height:1.3}
+.workspace-shell .wfunnel-row{font-size:10px!important;line-height:1.3}
+.workspace-shell .wchat-msg{font-size:11px!important;line-height:1.4}
+.workspace-shell .wchat-msg small{font-size:9.5px!important}
+.workspace-shell .wcontact-btn{font-size:10px!important}
+.workspace-shell label{font-size:10px!important;line-height:1.3}
+.workspace-shell input,
+.workspace-shell select{font-size:10.5px!important;line-height:1.3}
+.workspace-shell .request-reference b{font-size:9px!important}
+.workspace-shell .request-reference strong{font-size:11.5px!important}
+.workspace-shell .request-id,
+.workspace-shell .req-id,
+.workspace-shell .route-pill{font-size:9px!important}
+.workspace-shell .activity-search,
+.workspace-shell .activity-filter{font-size:10px!important}
+.workspace-shell .activity-result{font-size:10.5px!important;line-height:1.35}
+.workspace-shell .activity-result b{font-size:11px!important}
+.workspace-shell .activity-result small{font-size:9.5px!important}
+
+.phone-mock .phone-appbar .app-title{font-size:13px!important;line-height:1.25}
+.phone-mock .phone-appbar .app-status{font-size:9px!important;line-height:1.25}
+.phone-mock .phone-body{font-size:10.5px}
+.phone-mock .phone-card .pc-time{font-size:8.5px!important}
+.phone-mock .phone-card .pc-msg{font-size:11px!important;line-height:1.35}
+.phone-mock .phone-card .pc-sub{font-size:10px!important;line-height:1.35}
+.phone-mock .phone-card .pc-status{font-size:8.5px!important}
+.phone-mock .phone-stat b{font-size:14px!important}
+.phone-mock .phone-stat span{font-size:8.5px!important}
+.phone-mock .phone-stat em{font-size:8px!important}
+.phone-mock .phone-section-label{font-size:9px!important;line-height:1.3}
+.phone-mock .phone-tab{font-size:8px!important;line-height:1.2}
+.phone-mock .phone-tab span{font-size:8px!important}
+.phone-mock .request-reference b{font-size:8.5px!important}
+.phone-mock .request-reference strong{font-size:11px!important}
+.phone-mock .request-id,
+.phone-mock .req-id,
+.phone-mock .route-pill{font-size:8.5px!important}
+.phone-mock label{font-size:9px!important;line-height:1.3}
+.phone-mock input,
+.phone-mock select{font-size:9.5px!important;line-height:1.3}
+.phone-mock .route-note{font-size:9.5px!important;line-height:1.4}
+.phone-mock .phone-contact-btn{font-size:9px!important}
+.phone-mock .phone-activity-tools .activity-search,
+.phone-mock .phone-activity-tools .activity-filter{font-size:8.5px!important}
+.phone-mock .activity-result{font-size:9.5px!important;line-height:1.35}
+.phone-mock .activity-result b{font-size:10px!important}
+.phone-mock .activity-result small{font-size:8.5px!important}
+
+.office-shot .workspace-mini{font-family:var(--body)}
+.office-shot .workspace-mini > div:first-child{font-size:11px!important;line-height:1.25}
+.office-shot .workspace-mini > div:nth-child(2){font-size:11px}
+.office-shot .workspace-mini b{font-size:18px!important;line-height:1.1}
+.office-shot .workspace-mini span{font-size:10px!important;line-height:1.3}
+.office-shot .workspace-mini > div:nth-child(2) > div:last-child{font-size:11px!important;line-height:1.35}
+
+/* Keep tiny-screen typography from becoming unreadably small. */
+@media(max-width:480px){
+  .workspace-shell .wnav-tab{font-size:9.5px!important}
+  .workspace-shell .wlist li,
+  .workspace-shell .wlist b{font-size:11px!important}
+  .phone-mock .phone-card .pc-msg{font-size:10.5px!important}
+}
+
 /* ============================================================
    CONTENT READABILITY — LIGHT + DARK
    Keep emphasis panels, mock metrics and launch-focus content readable.
@@ -978,7 +1140,8 @@ header{background:rgba(250,247,241,.96)}
   .wrap{padding-inline:16px}
   .nav{height:68px}
   .mobile-nav{top:78px;inset-block-start:78px;padding-inline:16px}
-  .header-actions .theme-toggle button{font-size:10px;padding:7px 8px}
+  .header-actions .theme-toggle button{font-size:10px;padding:7px 8px;min-width:58px;gap:5px}
+  .header-actions .theme-icon{width:13px;height:13px;flex-basis:13px}
   .menu-btn{width:40px;height:40px;flex:0 0 40px}
   .hero{padding:24px 0 40px}
   .hero .stamp{font-size:10px;max-width:100%;white-space:normal}
@@ -1020,7 +1183,8 @@ header{background:rgba(250,247,241,.96)}
 @media (max-width:360px){
   .header-actions{gap:4px}
   .theme-toggle{padding:2px}
-  .theme-toggle button{padding-inline:5px!important;font-size:8.5px!important}
+  .theme-toggle button{padding-inline:5px!important;font-size:8.5px!important;min-width:43px!important;gap:3px!important}
+   .theme-toggle .theme-icon{width:11px;height:11px;flex-basis:11px}
   .brand .mark{width:30px;height:30px}
   .brand{font-size:16px}
   .hero h1{font-size:32px}
@@ -1412,7 +1576,8 @@ section{scroll-margin-top:calc(var(--nav-h) + 18px)}
   .brand .tag{display:inline-flex !important;align-items:center;white-space:nowrap;font-size:10px;letter-spacing:.05em;margin-left:1px}
   /* Keep theme control visible on compact/mobile headers. */
   .header-actions .theme-toggle{display:flex!important;flex:0 0 auto;gap:1px;padding:2px}
-  .header-actions .theme-toggle button{font-size:9px!important;padding:6px 7px!important;line-height:1;min-width:0}
+  .header-actions .theme-toggle button{font-size:9px!important;padding:6px 7px!important;line-height:1;min-width:48px!important;gap:4px}
+   .header-actions .theme-icon{width:12px;height:12px;flex-basis:12px}
   .nav-pilot-cta{display:none!important}
   .hero{padding-top:34px;padding-bottom:38px}
   .hero-grid{grid-template-columns:1fr!important;gap:26px!important}
@@ -1520,7 +1685,1072 @@ html{scroll-padding-top:var(--nav-height) !important;}
   .brand .tag{display:inline-flex!important;align-items:center;white-space:nowrap!important;}
 }
 
+
+
+/* ============================================================
+   NAVEGAIT main-content compatibility layer
+   Keeps the existing index.html header/footer untouched while
+   supplying only the missing styles required by the NAVEGAIT
+   main content and platform mockups.
+   ============================================================ */
+ :root{--surface-2:#F5F8FA;--text:var(--ink);--muted:var(--ink-soft)}
+[data-theme="dark"]{--surface-2:#132B36;--text:var(--ink);--muted:var(--ink-soft)}
+.section-anchor{display:block;position:relative;top:-92px;visibility:hidden;height:0}
+.activity-results{display:grid;gap:7px}
+.activity-results{
+  max-height:280px;
+  overflow:auto;
+  padding-right:2px;
+  scrollbar-width:thin;
+}
+.cap-icon{width:28px;height:28px;border-radius:8px;display:grid;place-items:center;background:var(--paper-dim);border:1px solid var(--line);font-family:var(--mono);font-size:9px;font-weight:700;color:var(--gold-ink);flex:0 0 28px}
+.capability-list{display:flex;flex-wrap:wrap;gap:8px;margin-top:20px}
+.capability-list span{font-size:11px;font-weight:700;padding:7px 10px;border:1px solid var(--line);border-radius:999px;background:var(--surface-2);color:var(--text)}
+.request-progress .current{
+  color:var(--navy);background:rgba(20,132,132,.12);
+}
+[data-theme="dark"] .request-progress .current{color:#fff}
+.epx-bridge{
+  max-width:1180px;margin:0 auto 22px;padding:14px 18px;
+  border:1px solid var(--line);border-radius:12px;background:var(--paper-dim);
+}
+.epx-bridge strong{display:block;font-family:var(--display);font-size:18px;color:var(--navy);margin-top:3px}
+.epx-bridge p{margin:4px 0 0;color:var(--ink-soft);font-size:12px}
+[data-theme="dark"] .epx-bridge strong{color:#fff}
+.epx-bridge{margin-bottom:18px}
+/* ============================================================
+   PLATFORM MOCKUP UPDATE
+   NAVEGAIT work-record routing + Req-ID + Activity search/filter
+   ============================================================ */
+.mock-brand{
+  display:inline-flex;align-items:center;gap:5px;
+  font-family:var(--display);font-weight:800;font-size:11px;
+  color:var(--navy);white-space:nowrap;margin-right:8px
+}
+[data-theme="dark"] .mock-brand{color:#fff}
+.mock-brand{font-family:var(--display)!important;font-weight:800!important;color:var(--text)!important}
+[data-theme="dark"] .workspace-topbar .mock-brand,[data-theme="dark"] .phone-appbar .mock-brand{color:#F5FAFC!important}
+.office-capabilities{display:grid;gap:0;padding:18px 22px;border-bottom:1px solid var(--line);background:linear-gradient(180deg,var(--surface-2),var(--card))}
+.office-capability{display:flex;gap:12px;align-items:flex-start;padding:12px 0;border-bottom:1px solid var(--line)}
+.office-capability:last-child{border-bottom:0}
+.office-capability b{display:block;font-family:var(--display);font-size:13px;color:var(--text)}
+.office-capability span:last-child{display:block;font-size:11.5px;color:var(--muted);line-height:1.45;margin-top:2px}
+.phone-activity-results{display:grid;gap:7px}
+.phone-activity-results{
+  max-height:225px;
+  overflow:auto;
+  scrollbar-width:thin;
+}
+.phone-activity-tools{display:grid;gap:7px;margin-bottom:10px}
+.phone-activity-tools .activity-search,.phone-activity-tools .activity-filter{font-size:9px;padding:7px}
+/* Keep dense mock content readable */
+.phone-activity-tools{
+  gap:6px;
+}
+.phone-activity-tools .activity-search,
+.phone-activity-tools .activity-filter{
+  min-height:34px;
+}
+.refcode{font-family:var(--mono);font-size:11px;letter-spacing:.05em;color:var(--ink-faint)}
+.refcode{white-space:nowrap}
+.refcode{white-space:normal}
+.req-id,.route-pill{
+  display:inline-flex;align-items:center;gap:5px;padding:5px 8px;border-radius:999px;
+  font-family:var(--mono);font-size:9px;letter-spacing:.03em;
+  background:var(--paper-dim);border:1px solid var(--line);color:var(--ink-soft)
+}
+.req-id b{color:var(--navy)}
+[data-theme="dark"] .req-id b{color:#fff}
+.req-id,.route-pill{
+  line-height:1.1;
+}
+.req-meta{
+  display:flex;flex-wrap:wrap;gap:7px;margin-bottom:12px
+}
+/* Request metadata */
+.req-meta{
+  align-items:center;
+}
+.request-progress{
+  display:flex;align-items:center;gap:6px;margin:-2px 0 12px;
+  font:700 8px var(--mono);color:var(--ink-faint);
+}
+.request-progress span{
+  padding:4px 6px;border-radius:999px;background:var(--paper-dim);
+  white-space:nowrap;
+}
+.request-progress .done{color:var(--teal)}
+.request-progress .current{
+  color:var(--navy);background:rgba(20,132,132,.12);
+}
+[data-theme="dark"] .request-progress .current{color:#fff}
+.activity-result .rid{font:700 8.5px var(--mono);color:var(--teal);white-space:nowrap}
+.phone-activity-result .rid{font:700 8px var(--mono);color:var(--teal)}
+.activity-result .rid{
+  min-width:65px;
+}
+.activity-result .rid{
+    grid-column:1/-1;
+  }
+.route-box{
+  display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:12px;
+  padding:10px;border:1px solid var(--line);border-radius:10px;background:var(--paper-dim)
+}
+.route-box label,.activity-filter-label{
+  display:block;font-family:var(--mono);font-size:8.5px;letter-spacing:.04em;
+  text-transform:uppercase;color:var(--ink-faint);margin-bottom:5px
+}
+.route-box select,.activity-filter,.activity-search{
+  width:100%;border:1px solid var(--line-strong);background:var(--card);color:var(--ink);
+  border-radius:7px;padding:7px 8px;font:600 10px var(--mono);outline:none
+}
+.route-box select:focus,.activity-filter:focus,.activity-search:focus{
+  border-color:var(--teal);box-shadow:0 0 0 2px rgba(20,132,132,.13)
+}
+[data-theme="dark"] .route-box select,[data-theme="dark"] .activity-filter,[data-theme="dark"] .activity-search{
+  color:#fff;background:var(--card)
+}
+.route-note{
+  margin:-3px 0 9px;
+  font-size:9px;
+  line-height:1.45;
+  color:var(--ink-faint);
+}
+.req-id,.route-pill{
+  display:inline-flex;align-items:center;gap:5px;padding:5px 8px;border-radius:999px;
+  font-family:var(--mono);font-size:9px;letter-spacing:.03em;
+  background:var(--paper-dim);border:1px solid var(--line);color:var(--ink-soft)
+}
+.req-id,.route-pill{
+  line-height:1.1;
+}
+@media(max-width:720px){
+  .route-box{grid-template-columns:1fr}
+  .activity-tools{grid-template-columns:1fr 1fr}
+  .activity-tools .activity-search{grid-column:1/-1}
+}
+@media(max-width:900px){
+  .tour-head{
+    align-items:flex-start;
+    flex-direction:column;
+  }
+  .refcode{white-space:normal}
+}
+@media(max-width:720px){
+  .section{scroll-margin-top:78px}
+  .tour-block{scroll-margin-top:78px}
+  .workspace-nav{
+    overflow-x:auto;
+    scrollbar-width:none;
+  }
+  .workspace-nav::-webkit-scrollbar{display:none}
+  .wnav-tab{
+    flex:0 0 auto;
+    min-width:72px;
+  }
+  .wchat-feed{
+    max-height:220px;
+  }
+  .activity-tools{
+    grid-template-columns:1fr!important;
+  }
+  .activity-tools .activity-search{
+    grid-column:auto!important;
+  }
+  .activity-result{
+    grid-template-columns:1fr auto;
+  }
+  .activity-result .rid{
+    grid-column:1/-1;
+  }
+  .activity-result .status{
+    grid-column:2;
+    grid-row:2;
+  }
+  .route-box{
+    padding:9px;
+  }
+  .phone-body{
+    min-height:340px;
+  }
+}
+@media(max-width:720px){
+  .request-progress{overflow:auto;padding-bottom:2px}
+}
+
+/* ============================================================
+   DARK MODE READABILITY — production contrast pass
+   Keeps the existing NAVEGAIT header/footer and branding intact.
+   ============================================================ */
+[data-theme="dark"] body{
+  color:#F3F7F8;
+}
+[data-theme="dark"] p,
+[data-theme="dark"] .lead,
+[data-theme="dark"] .section-head .lead,
+[data-theme="dark"] .center-head .lead{
+  color:#C7D3D8;
+}
+[data-theme="dark"] h1,
+[data-theme="dark"] h2,
+[data-theme="dark"] h3,
+[data-theme="dark"] h4,
+[data-theme="dark"] h5,
+[data-theme="dark"] strong,
+[data-theme="dark"] b{
+  color:#F8FBFC;
+}
+[data-theme="dark"] .eyebrow,
+[data-theme="dark"] .eyebrow.teal{
+  color:#8FD3CB;
+}
+[data-theme="dark"] .hero .stamp,
+[data-theme="dark"] .tour-caption,
+[data-theme="dark"] .tour-role,
+[data-theme="dark"] .pod-person div span,
+[data-theme="dark"] .pod-reply,
+[data-theme="dark"] .workspace-topbar .wlabel,
+[data-theme="dark"] .wstat span,
+[data-theme="dark"] .phone-card .pc-time,
+[data-theme="dark"] .phone-stat span,
+[data-theme="dark"] .phone-section-label,
+[data-theme="dark"] .phone-tab,
+[data-theme="dark"] .wlist>li>span:last-child,
+[data-theme="dark"] .wlist small,
+[data-theme="dark"] .wref-list li{
+  color:#A9BBC2;
+}
+[data-theme="dark"] .social-proof p,
+[data-theme="dark"] .wlegend div,
+[data-theme="dark"] .wfunnel-row,
+[data-theme="dark"] .phone-card .pc-sub,
+[data-theme="dark"] .request-route small,
+[data-theme="dark"] .request-governance-note span,
+[data-theme="dark"] .mobile-route-grid span,
+[data-theme="dark"] .wchat-msg,
+[data-theme="dark"] .faq-item p,
+[data-theme="dark"] .day-body .reply{
+  color:#C1CED3;
+}
+[data-theme="dark"] .hero .stamp{
+  color:#B9C8CD;
+  border-color:#39505A;
+  background:#132831;
+}
+[data-theme="dark"] .brand .tag{color:#9FB0B7}
+[data-theme="dark"] .links a{color:#C3D0D5}
+[data-theme="dark"] .links a:hover{color:#fff;background:#162D37}
+[data-theme="dark"] .theme-toggle button{color:#9FB0B7}
+[data-theme="dark"] .theme-toggle button.active{background:#F1F5F6;color:#0B1A22}
+[data-theme="dark"] .menu-btn{background:#122732;border-color:#39505A}
+[data-theme="dark"] .btn.outline{color:#F4F8F9;border-color:#4A626C}
+[data-theme="dark"] .btn.outline:hover{color:#fff;border-color:#E3B871;background:#142A34}
+[data-theme="dark"] .pod-person .av{background:#18313B;border-color:#35505A}
+[data-theme="dark"] .pod-msg{background:#18313B;color:#F3F7F8}
+[data-theme="dark"] .pod-msg.you{background:#E3B871;color:#08171F}
+[data-theme="dark"] .wstat b,
+[data-theme="dark"] .phone-stat b,
+[data-theme="dark"] .wnav-tab.active,
+[data-theme="dark"] .request-route-chooser>div strong,
+[data-theme="dark"] .request-route b,
+[data-theme="dark"] .request-governance-note b,
+[data-theme="dark"] .mobile-route-grid b,
+[data-theme="dark"] .wlist b,
+[data-theme="dark"] .phone-card .pc-msg,
+[data-theme="dark"] .feature-chip h5,
+[data-theme="dark"] .faq-item summary,
+[data-theme="dark"] .day-body .msg{
+  color:#F8FBFC;
+}
+[data-theme="dark"] .wnav-tab{color:#A9BBC2}
+[data-theme="dark"] .wpanel h5{color:#A9BBC2}
+[data-theme="dark"] .feature-chip{background:#122732;border-color:#2D4652}
+[data-theme="dark"] .feature-chip p{color:#C1CED3}
+[data-theme="dark"] .request-route{background:#132831;border-color:#36505A}
+[data-theme="dark"] .request-route.office{background:rgba(29,122,114,.16);border-color:rgba(80,190,178,.42)}
+[data-theme="dark"] .request-route-chooser,
+[data-theme="dark"] .request-governance-note{background:#10242D;border-color:#304953}
+[data-theme="dark"] .mobile-route-grid>div{background:#132831;border-color:#304953}
+[data-theme="dark"] .phone-seg-btn{color:#A9BBC2}
+[data-theme="dark"] .phone-seg-btn.active{background:#19323C;color:#F8FBFC}
+[data-theme="dark"] .phone-contact-btn,
+[data-theme="dark"] .wcontact-btn{background:#132831;color:#F4F8F9;border-color:#49616A}
+[data-theme="dark"] .phone-contact-btn.whatsapp,
+[data-theme="dark"] .wcontact-btn.whatsapp{color:#fff}
+[data-theme="dark"] .faq-item summary::after{color:#E3B871}
+[data-theme="dark"] .faq-item{border-color:#2A4048}
+[data-theme="dark"] .day-note{background:#132831;border-color:#38515B;color:#C7D3D8}
+[data-theme="dark"] .day-note strong{color:#F8FBFC}
+[data-theme="dark"] .tinted{background:#0E2028}
+[data-theme="dark"] .platform-overview,
+[data-theme="dark"] .route-strip,
+[data-theme="dark"] .day-card{background:#122732;border-color:#2D4652}
+[data-theme="dark"] select,
+[data-theme="dark"] input,
+[data-theme="dark"] textarea{
+  background:#132831;color:#F3F7F8;border-color:#39535D;
+}
+[data-theme="dark"] ::placeholder{color:#8FA3AA}
+[data-theme="dark"] ::selection{background:#E3B871;color:#08171F}
+
+/* ============================================================
+   MOCK-SCREEN TYPE SCALE — aligned list typography
+   Keep primary item titles, supporting text and timestamps visually
+   consistent across Enterprise web and Partner mobile surfaces.
+   ============================================================ */
+.workspace-shell .wlist li{font-size:11px;line-height:1.3}
+.workspace-shell .wlist b{font-size:11px;line-height:1.3;font-weight:650}
+.workspace-shell .wlist small{font-size:10px;line-height:1.3}
+.workspace-shell .wlist>li>span:last-child{font-size:10px;line-height:1.3}
+
+/* Dense activity rows use the same compact hierarchy as workspace lists. */
+.workspace-shell .activity-result b{font-size:11px;line-height:1.3}
+.workspace-shell .activity-result small{font-size:10px;line-height:1.3}
+.phone-mock .phone-activity-result b{font-size:10.5px;line-height:1.3}
+.phone-mock .phone-activity-result small{font-size:9.5px;line-height:1.3}
+
+/* Dark mode keeps secondary text legible without increasing visual weight. */
+[data-theme="dark"] .workspace-shell .wlist small,
+[data-theme="dark"] .workspace-shell .wlist>li>span:last-child,
+[data-theme="dark"] .workspace-shell .activity-result small{color:var(--ink-soft)}
+
+@media(max-width:560px){
+  .workspace-shell .wlist b{font-size:11px}
+  .workspace-shell .wlist small,
+  .workspace-shell .wlist>li>span:last-child{font-size:10px}
+}
+
+/* ============================================================
+   REFINED CONTENT + TYPOGRAPHY
+   One page scale, tighter spacing, readable mock interfaces.
+   ============================================================ */
+:root{
+  --body-size:15.5px;
+  --body-leading:1.52;
+  --mock-size:11.5px;
+}
+body{font-size:var(--body-size);line-height:var(--body-leading)}
+p{line-height:1.52}
+.lead{font-size:17px;line-height:1.55}
+.eyebrow{font-size:11px;letter-spacing:.08em;margin-bottom:10px}
+h1{line-height:1.04}
+h2{line-height:1.14}
+h3{font-size:18px;line-height:1.3}
+.section-head{margin-bottom:28px}
+.center-head{margin-bottom:32px}
+section{padding:72px 0}
+.hero{padding:30px 0 48px}
+.tour-block{margin-bottom:32px}
+.tour-head{margin-bottom:12px}
+.tour-head h3{font-size:17px}
+.refcode{font-size:10px!important;letter-spacing:.06em}
+.tour-role{font-size:11px!important;line-height:1.25}
+.tour-caption{font-size:10.5px!important;line-height:1.3}
+
+/* Mock screens: hierarchy mirrors the page without oversized labels. */
+.workspace-shell{font-size:var(--mock-size)}
+.workspace-shell .workspace-topbar{font-size:10px}
+.workspace-shell .workspace-band{font-size:11px}
+.workspace-shell .workspace-band small{font-size:9.5px}
+.workspace-shell .wnav-tab{font-size:10px!important;line-height:1.2}
+.workspace-shell h5{font-size:11px!important;line-height:1.25}
+.workspace-shell .wstat b{font-size:18px!important}
+.workspace-shell .wstat span{font-size:9.5px!important}
+.workspace-shell .wstat em{font-size:8.5px!important}
+.workspace-shell .wlist li,
+.workspace-shell .wlist b{font-size:10.8px!important;line-height:1.32}
+.workspace-shell .wlist small{font-size:9.2px!important}
+.workspace-shell .wchat-msg{font-size:10.5px!important;line-height:1.35}
+.workspace-shell label{font-size:9.5px!important}
+.workspace-shell input,.workspace-shell select{font-size:10px!important}
+.workspace-shell .activity-result{font-size:10px!important;line-height:1.32}
+.workspace-shell .activity-result b{font-size:10.5px!important}
+.workspace-shell .activity-result small{font-size:9px!important}
+
+.phone-mock .phone-appbar .app-title{font-size:12.5px!important}
+.phone-mock .phone-appbar .app-status{font-size:8.5px!important}
+.phone-mock .phone-body{font-size:10px}
+.phone-mock .phone-card .pc-msg{font-size:10.5px!important;line-height:1.32}
+.phone-mock .phone-card .pc-sub{font-size:9.5px!important;line-height:1.32}
+.phone-mock .phone-card .pc-time{font-size:8px!important}
+.phone-mock .phone-section-label{font-size:8.8px!important}
+.phone-mock .phone-tab,.phone-mock .phone-tab span{font-size:8px!important}
+.phone-mock label{font-size:8.8px!important}
+.phone-mock input,.phone-mock select{font-size:9.2px!important}
+.phone-mock .activity-result,.phone-mock .phone-activity-result{font-size:9.2px!important;line-height:1.32}
+
+.platform-overview-copy h3{line-height:1.3}
+.platform-overview-copy p{font-size:15px;line-height:1.5}
+.platform-capabilities span{font-size:11px!important}
+.feature-chip h5{font-size:12px!important}
+.feature-chip p{font-size:11px!important;line-height:1.35}
+
+@media(max-width:760px){
+  section{padding:56px 0}
+  .hero{padding:24px 0 40px}
+  .lead{font-size:16px}
+  .section-head{margin-bottom:24px}
+  .tour-block{margin-bottom:28px}
+}
+@media(max-width:480px){
+  body{font-size:15px}
+  h1{font-size:clamp(34px,10vw,46px)}
+  h2{font-size:clamp(25px,7.2vw,32px)}
+  .workspace-shell .wnav-tab{font-size:9px!important}
+  .workspace-shell .wlist li,.workspace-shell .wlist b{font-size:10.5px!important}
+  .phone-mock .phone-card .pc-msg{font-size:10px!important}
+}
+
 </style>
+
+<style id="final-typography-alignment">
+/* Final page-wide typography alignment */
+:root{
+  --fs-body:15px;
+  --fs-lead:16px;
+  --fs-section-label:11px;
+  --fs-card-title:14px;
+  --fs-card-body:12.5px;
+  --fs-meta:10.5px;
+  --fs-micro:9.5px;
+}
+body{font-size:var(--fs-body);line-height:1.6}
+.section-head .lead,.center-head .lead{font-size:var(--fs-lead);line-height:1.55}
+.eyebrow{font-size:var(--fs-section-label);line-height:1.25}
+.card h3,.svc-card h3,.launch-focus h3{font-size:var(--fs-card-title);line-height:1.3}
+.card p,.svc-card p,.launch-focus p{font-size:var(--fs-card-body);line-height:1.5}
+/* Activity / list content */
+.wlist li>div b,.activity-result b{font-size:11px;line-height:1.35}
+.wlist li>div small,.activity-result small{font-size:10px;line-height:1.35}
+.wlist li>span,.activity-result .status,.refcode{font-size:10px;line-height:1.25}
+/* Mock-screen hierarchy */
+.mock-brand{font-size:10.5px}
+.workspace-topbar .wlabel,.phone-appbar .app-title{font-size:9.5px}
+.workspace-band span{font-size:11px}
+.workspace-band small{font-size:9.5px}
+.workspace-nav,.wnav-tab{font-size:9.5px}
+.wpanel h5{font-size:11px;line-height:1.3}
+.wpanel p,.wpanel li{font-size:10px;line-height:1.4}
+.req-id,.route-pill{font-size:9px}
+.office-capability b{font-size:12px}
+.office-capability span:last-child{font-size:10.5px}
+.mobile-pod-label{font-size:9px}
+.mobile-pod-copy b{font-size:11px}
+.mobile-pod-copy span{font-size:9.5px}
+.phone-body label,.field label{font-size:9.5px}
+.field input,.field select{font-size:10px}
+.phone-card h4{font-size:11px}
+.phone-card p,.phone-card li{font-size:9.5px}
+.phone-week-day,.mobile-actions{font-size:9.5px}
+/* Don't let desktop/tablet mock content become oversized */
+@media(max-width:760px){
+  body{font-size:14px}
+  .section-head .lead,.center-head .lead{font-size:15px}
+  .card p,.svc-card p,.launch-focus p{font-size:12px}
+}
+</style>
+
+<style>
+/* ============================================================
+   PLATFORM MOCK-SCREEN REFINEMENT
+   Production-style Enterprise web + Partner mobile surfaces.
+   Keeps existing content and interaction model; improves
+   hierarchy, density, navigation, states and dark-mode clarity.
+   ============================================================ */
+
+.platform-overview{
+  border:1px solid var(--line);
+  background:linear-gradient(135deg,var(--card),var(--paper-dim));
+  box-shadow:0 24px 55px -34px rgba(11,33,54,.34);
+}
+
+.tour-block{
+  margin-bottom:52px;
+}
+.tour-head{
+  margin-bottom:16px;
+  padding-inline:2px;
+}
+.tour-head h3{
+  font-size:19px;
+  letter-spacing:-.02em;
+}
+.tour-head .refcode{
+  font-size:9px;
+  letter-spacing:.07em;
+  color:var(--ink-faint);
+  border:1px solid var(--line);
+  background:var(--paper-dim);
+  border-radius:999px;
+  padding:5px 9px;
+}
+
+/* Web workspace becomes a compact application shell */
+.workspace-shell{
+  border-radius:16px;
+  box-shadow:0 26px 55px -34px rgba(11,33,54,.42);
+  background:var(--card);
+}
+.workspace-topbar{
+  min-height:42px;
+  padding:10px 14px;
+  background:color-mix(in srgb,var(--paper-dim) 88%,var(--card));
+}
+.workspace-topbar .wdot{
+  width:7px;
+  height:7px;
+}
+.workspace-topbar .mock-brand{
+  margin-left:7px;
+  font-family:var(--display);
+  font-weight:800;
+  letter-spacing:-.01em;
+}
+.workspace-topbar .wlabel{
+  margin-left:auto;
+  max-width:44%;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  white-space:nowrap;
+  opacity:.8;
+}
+
+/* Desktop app navigation: left rail instead of a generic tab strip */
+.workspace-shell{
+  display:grid;
+  grid-template-columns:132px minmax(0,1fr);
+  grid-template-rows:auto auto minmax(0,1fr);
+}
+.workspace-shell .workspace-topbar,
+.workspace-shell .workspace-band{
+  grid-column:1/-1;
+}
+.workspace-shell .workspace-nav{
+  grid-column:1;
+  grid-row:3;
+  display:flex;
+  flex-direction:column;
+  gap:4px;
+  padding:12px 8px;
+  border-right:1px solid var(--line);
+  border-bottom:0;
+  background:var(--paper-dim);
+}
+.workspace-shell .wnav-tab{
+  min-height:37px;
+  padding:9px 10px;
+  border:0;
+  border-radius:9px;
+  gap:8px;
+  font-family:var(--body);
+  font-size:10px!important;
+  font-weight:600;
+  letter-spacing:0;
+  color:var(--ink-soft);
+}
+.workspace-shell .wnav-tab:hover{
+  background:var(--card);
+  color:var(--navy);
+}
+[data-theme="dark"] .workspace-shell .wnav-tab:hover{
+  color:#fff;
+}
+.workspace-shell .wnav-tab.active{
+  background:var(--card);
+  color:var(--navy);
+  box-shadow:0 5px 14px -12px rgba(11,33,54,.7);
+  border:1px solid var(--line);
+}
+[data-theme="dark"] .workspace-shell .wnav-tab.active{
+  color:#fff;
+  background:var(--paper);
+}
+.workspace-shell .wnav-tab.active::before{
+  content:"";
+  width:3px;
+  height:17px;
+  border-radius:3px;
+  background:var(--gold);
+  margin-left:-7px;
+}
+.workspace-shell .workspace-body{
+  grid-column:2;
+  grid-row:3;
+  min-width:0;
+  padding:18px;
+  background:var(--card);
+}
+
+/* Enterprise header band is an application context bar */
+.workspace-shell .workspace-band{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:14px;
+  padding:10px 16px;
+  font-family:var(--body);
+  font-size:10px!important;
+  font-weight:800;
+  letter-spacing:.01em;
+  text-transform:none;
+}
+.workspace-shell .workspace-band small{
+  font-family:var(--mono);
+  font-size:8.5px!important;
+  font-weight:500;
+  opacity:.72;
+  letter-spacing:.02em;
+}
+
+/* KPI row */
+.workspace-shell .wstats{
+  gap:10px;
+  margin-bottom:14px;
+}
+.workspace-shell .wstat{
+  position:relative;
+  overflow:hidden;
+  border-radius:11px;
+  padding:12px;
+  background:var(--card);
+}
+.workspace-shell .wstat::after{
+  content:"";
+  position:absolute;
+  right:-16px;
+  bottom:-18px;
+  width:52px;
+  height:52px;
+  border-radius:50%;
+  background:var(--paper-dim);
+}
+.workspace-shell .wstat b,
+.workspace-shell .wstat span,
+.workspace-shell .wstat em{
+  position:relative;
+  z-index:1;
+}
+.workspace-shell .wstat b{
+  font-size:18px!important;
+}
+.workspace-shell .wstat em{
+  font-size:9px!important;
+}
+
+/* Data panels */
+.workspace-shell .wtwocol{
+  gap:10px;
+  margin-bottom:10px;
+}
+.workspace-shell .wpanel{
+  border-radius:11px;
+  padding:13px;
+  background:var(--card);
+}
+.workspace-shell .wpanel h5{
+  margin-bottom:10px;
+  font-size:9.5px!important;
+}
+.workspace-shell .wbars{
+  height:82px;
+  gap:6px;
+}
+.workspace-shell .wlegend{
+  gap:5px;
+}
+.workspace-shell .wlist{
+  gap:0;
+}
+.workspace-shell .wlist li{
+  padding:9px 0;
+}
+.workspace-shell .wlist li:first-child{
+  padding-top:0;
+}
+.workspace-shell .wlist li:last-child{
+  padding-bottom:0;
+}
+.workspace-shell .wlist li::before{
+  content:"";
+  width:6px;
+  height:6px;
+  flex:0 0 6px;
+  border-radius:50%;
+  background:var(--teal);
+  margin-top:5px;
+  box-shadow:0 0 0 3px rgba(29,122,114,.08);
+}
+.workspace-shell .wlist li>div{
+  flex:1;
+  min-width:0;
+}
+.workspace-shell .wlist b{
+  white-space:nowrap;
+  overflow:hidden;
+  text-overflow:ellipsis;
+}
+
+/* Request / activity forms get stronger field grouping */
+.workspace-shell .form-card,
+.workspace-shell .request-panel,
+.workspace-shell .activity-panel{
+  border-radius:12px;
+  box-shadow:none;
+}
+.workspace-shell input,
+.workspace-shell select{
+  min-height:34px;
+  border-radius:8px;
+}
+.workspace-shell label{
+  font-weight:700;
+  color:var(--ink-soft);
+}
+
+/* Phone shell */
+.phone-mock{
+  width:248px;
+  padding:8px;
+  border-radius:31px;
+  background:linear-gradient(145deg,var(--navy),var(--navy-2));
+  box-shadow:0 30px 60px -28px rgba(11,33,54,.58);
+}
+.phone-mock-inner{
+  border-radius:24px;
+  box-shadow:inset 0 0 0 1px rgba(255,255,255,.08);
+}
+.phone-mock-notch{
+  width:88px;
+  height:17px;
+  border-radius:0 0 11px 11px;
+}
+.phone-appbar{
+  padding:19px 14px 12px;
+  gap:5px;
+}
+.phone-appbar .mock-brand{
+  font-size:11px!important;
+  opacity:.72;
+}
+.phone-appbar .app-title{
+  font-size:14px!important;
+}
+.phone-appbar .app-status{
+  font-size:8.5px!important;
+}
+.phone-body{
+  padding:11px;
+  min-height:280px;
+}
+.phone-card{
+  border-radius:11px;
+  padding:10px;
+  margin-bottom:8px;
+  box-shadow:0 7px 16px -15px rgba(11,33,54,.55);
+}
+.phone-card .pc-msg{
+  font-size:11px!important;
+}
+.phone-card .pc-sub{
+  font-size:9.5px!important;
+}
+.phone-section-label{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin:3px 1px 7px;
+  font-size:8.5px!important;
+}
+.phone-tabbar{
+  margin:0 9px 9px;
+  border-radius:13px;
+  background:var(--card);
+  border:1px solid var(--line);
+  box-shadow:0 10px 22px -18px rgba(11,33,54,.8);
+}
+.phone-tab{
+  padding:8px 2px 9px;
+  border-radius:10px;
+  color:var(--ink-faint);
+}
+.phone-tab.active{
+  background:var(--paper-dim);
+  color:var(--teal);
+}
+
+/* Partner Office mobile card */
+.mobile-pod-card{
+  border-radius:13px;
+  box-shadow:0 8px 18px -17px rgba(11,33,54,.65);
+}
+.mobile-pod-label{
+  font-size:7.5px!important;
+  letter-spacing:.08em;
+}
+.mobile-pod-copy b{
+  font-size:11.5px!important;
+}
+.mobile-pod-copy span{
+  font-size:9px!important;
+  line-height:1.35;
+}
+.mobile-actions{
+  font-size:8.5px!important;
+}
+
+/* Keep mini visual references intentional rather than decorative */
+.platform-mini-visual{
+  position:relative;
+  min-height:220px;
+}
+.mini-browser{
+  border-radius:14px;
+  border:1px solid var(--line);
+  box-shadow:0 22px 44px -28px rgba(11,33,54,.42);
+  background:var(--card);
+}
+.mini-browser-bar{
+  height:31px;
+  padding-inline:11px;
+  font-size:8px;
+  background:var(--paper-dim);
+}
+.mini-browser-content{
+  height:176px;
+  grid-template-columns:64px 1fr;
+}
+.mini-side{
+  background:var(--paper-dim);
+}
+.mini-main{
+  padding:12px;
+}
+.mini-kpis{
+  gap:6px;
+}
+.mini-kpis i{
+  border-radius:7px;
+}
+.mini-panels{
+  gap:7px;
+  margin-top:8px;
+}
+.mini-panels i{
+  border-radius:8px;
+}
+.mini-list{
+  gap:5px;
+  margin-top:8px;
+}
+.mini-list i{
+  height:18px;
+  border-radius:5px;
+}
+.mini-phone{
+  width:112px;
+  height:208px;
+  border-radius:22px;
+  padding:6px;
+  background:var(--navy);
+  box-shadow:0 22px 42px -26px rgba(11,33,54,.62);
+}
+.mini-phone-content{
+  border-radius:17px;
+}
+
+/* Consistent role labels */
+.tour-role{
+  font-size:9px;
+  margin-bottom:8px;
+}
+.tour-role .tag{
+  font-size:8px;
+  padding:3px 8px;
+}
+
+/* Dark mode: no white islands inside the application shells */
+[data-theme="dark"] .workspace-shell .workspace-nav{
+  background:var(--paper-dim);
+}
+[data-theme="dark"] .workspace-shell .wnav-tab.active{
+  border-color:var(--line-strong);
+  box-shadow:none;
+}
+[data-theme="dark"] .workspace-shell .wstat::after{
+  background:rgba(255,255,255,.035);
+}
+[data-theme="dark"] .workspace-shell .wpanel,
+[data-theme="dark"] .workspace-shell .wstat{
+  background:var(--card);
+}
+[data-theme="dark"] .phone-tab.active{
+  background:rgba(29,122,114,.16);
+}
+[data-theme="dark"] .phone-mock{
+  box-shadow:0 30px 60px -28px rgba(0,0,0,.8);
+}
+
+/* Responsive: return web navigation to a horizontal strip before it gets cramped */
+@media (max-width:900px){
+  .workspace-shell{
+    display:block;
+  }
+  .workspace-shell .workspace-nav{
+    display:flex;
+    flex-direction:row;
+    padding:0 9px;
+    border-right:0;
+    border-bottom:1px solid var(--line);
+    overflow-x:auto;
+  }
+  .workspace-shell .wnav-tab{
+    border-radius:0;
+    min-height:42px;
+  }
+  .workspace-shell .wnav-tab.active{
+    box-shadow:none;
+    border:0;
+    border-bottom:2px solid var(--gold);
+  }
+  .workspace-shell .wnav-tab.active::before{
+    display:none;
+  }
+  .workspace-shell .workspace-body{
+    padding:16px;
+  }
+}
+@media (max-width:700px){
+  .tour-block{
+    margin-bottom:42px;
+  }
+  .tour-head{
+    align-items:flex-start;
+  }
+  .tour-head h3{
+    font-size:18px;
+  }
+  .tour-head .refcode{
+    font-size:8px;
+  }
+  .workspace-shell .wstats{
+    grid-template-columns:1fr 1fr;
+  }
+  .workspace-shell .wtwocol{
+    grid-template-columns:1fr;
+  }
+  .workspace-shell .workspace-body{
+    padding:13px;
+  }
+  .phone-mock{
+    width:min(292px,88vw);
+  }
+}
+@media (max-width:430px){
+  .workspace-shell .wstats{
+    gap:7px;
+  }
+  .workspace-shell .wstat{
+    padding:10px;
+  }
+  .workspace-shell .wstat b{
+    font-size:16px!important;
+  }
+  .workspace-shell .wstat span{
+    font-size:9px!important;
+  }
+  .phone-mock{
+    width:min(278px,88vw);
+  }
+}
+</style>
+
+
+<style>
+/* Activity tab — focused, production-style workflow UI */
+.activity-showcase .tour-inline{align-items:stretch}
+.activity-body{padding-top:17px!important}
+.activity-heading{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:13px}
+.activity-heading>div{display:flex;flex-direction:column;gap:3px}
+.activity-heading b{font-family:var(--display);font-size:13px;letter-spacing:-.01em}
+.activity-heading span{font-size:8.5px;color:var(--ink-faint)}
+.activity-action,.activity-filter-button{
+  border:1px solid var(--line);
+  background:var(--paper-dim);
+  color:var(--ink);
+  border-radius:8px;
+  padding:7px 9px;
+  font:700 8.5px var(--body);
+  cursor:pointer;
+}
+.activity-action{background:var(--navy);color:#fff;border-color:var(--navy)}
+.activity-summary{display:grid;grid-template-columns:repeat(4,1fr);gap:7px;margin-bottom:11px}
+.activity-summary>div{border:1px solid var(--line);border-radius:9px;padding:8px 9px;background:var(--paper-dim)}
+.activity-summary b{display:block;font:800 14px var(--display);letter-spacing:-.02em}
+.activity-summary span{display:block;margin-top:2px;font-size:7.5px;color:var(--ink-faint)}
+.activity-toolbar{display:grid;grid-template-columns:minmax(0,1fr) 104px 55px;gap:6px;margin-bottom:11px}
+.activity-searchbox{display:flex;align-items:center;gap:7px;border:1px solid var(--line);border-radius:8px;background:var(--card);padding:0 9px}
+.activity-searchbox svg,.mobile-search svg{width:12px;height:12px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round}
+.activity-searchbox input{border:0!important;outline:0;background:transparent;width:100%;height:30px;font:500 8.5px var(--body);color:var(--ink)}
+.activity-toolbar select{border:1px solid var(--line);border-radius:8px;background:var(--card);color:var(--ink);font:600 8px var(--body);padding:0 7px;outline:0}
+.activity-feed{border:1px solid var(--line);border-radius:10px;overflow:hidden;background:var(--card)}
+.activity-date{padding:7px 10px;background:var(--paper-dim);font:800 7px var(--mono);letter-spacing:.1em;color:var(--ink-faint);border-bottom:1px solid var(--line)}
+.activity-item{display:grid;grid-template-columns:28px minmax(0,1fr) auto;gap:9px;align-items:center;padding:10px;border-bottom:1px solid var(--line)}
+.activity-item:last-child{border-bottom:0}
+.activity-icon{width:27px;height:27px;border-radius:8px;display:grid;place-items:center;background:var(--paper-dim);color:var(--teal)}
+.activity-icon svg{width:13px;height:13px;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+.activity-icon.review{color:var(--gold)}
+.activity-icon.qc{color:var(--teal)}
+.activity-icon.delivered{color:var(--green)}
+.activity-copy{min-width:0;display:flex;flex-direction:column;gap:2px}
+.activity-copy b{font-size:9.5px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.activity-copy span{font-size:8px;color:var(--ink-soft);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.activity-copy small{font-size:7px;color:var(--ink-faint)}
+.activity-state,.mobile-status{font:800 6.5px var(--mono);letter-spacing:.05em;border-radius:999px;padding:4px 6px;white-space:nowrap}
+.activity-state.requested,.mobile-status.requested{background:rgba(29,122,114,.12);color:var(--teal)}
+.activity-state.approved{background:rgba(196,145,45,.13);color:#9a6e18}
+.activity-state.qc,.mobile-status.qc{background:rgba(194,126,82,.12);color:#9a5f3e}
+.activity-state.delivered,.mobile-status.delivered{background:rgba(54,139,88,.12);color:var(--green)}
+
+.activity-phone .phone-body{padding:12px 11px 9px}
+.mobile-page-intro{display:flex;flex-direction:column;gap:2px;margin:1px 1px 11px}
+.mobile-page-intro b{font:800 14px var(--display);letter-spacing:-.02em}
+.mobile-page-intro span{font-size:8.5px;color:var(--ink-faint)}
+.activity-phone .phone-segment{margin-bottom:9px}
+.phone-seg-btn{display:flex;align-items:center;justify-content:center;gap:4px}
+.phone-seg-btn b{font-size:7px;opacity:.7}
+.mobile-search{display:flex;align-items:center;gap:7px;border:1px solid var(--line);border-radius:9px;background:var(--card);height:31px;padding:0 9px;color:var(--ink-faint);font-size:8px;margin-bottom:10px}
+.mobile-activity-date{font:800 7px var(--mono);letter-spacing:.1em;color:var(--ink-faint);margin:0 1px 6px}
+.phone-activity-result{border:1px solid var(--line);border-radius:10px;padding:9px;margin-bottom:7px;background:var(--card)}
+.phone-activity-result.featured{border-color:color-mix(in srgb,var(--teal) 35%,var(--line));box-shadow:0 8px 18px -16px rgba(29,122,114,.65)}
+.mobile-result-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:6px;font-size:7px;color:var(--ink-faint)}
+.mobile-result-top .mobile-status{padding:3px 5px}
+.phone-activity-result>b{display:block;font-size:10px;line-height:1.2}
+.phone-activity-result>small{display:block;margin-top:3px;font-size:7.5px;line-height:1.35;color:var(--ink-faint)}
+.mobile-result-next{display:flex;justify-content:space-between;align-items:center;margin-top:8px;padding-top:7px;border-top:1px solid var(--line);font-size:7.5px;color:var(--teal)}
+.mobile-result-next span{font-weight:800;text-transform:uppercase;letter-spacing:.06em}
+
+[data-theme="dark"] .activity-searchbox,
+[data-theme="dark"] .activity-toolbar select,
+[data-theme="dark"] .mobile-search,
+[data-theme="dark"] .phone-activity-result,
+[data-theme="dark"] .activity-feed{background:var(--card)}
+[data-theme="dark"] .activity-action{background:var(--navy-2);border-color:var(--line-strong)}
+[data-theme="dark"] .activity-summary>div,
+[data-theme="dark"] .activity-date{background:var(--paper-dim)}
+
+@media(max-width:900px){
+  .activity-summary{grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:700px){
+  .activity-heading{align-items:flex-start}
+  .activity-heading span{max-width:230px}
+  .activity-toolbar{grid-template-columns:1fr 86px}
+  .activity-filter-button{display:none}
+  .activity-item{grid-template-columns:27px minmax(0,1fr)}
+  .activity-state{grid-column:2;justify-self:start;margin-top:2px}
+}
+</style>
+
 </head>
 <body id="top">
 
@@ -1539,8 +2769,19 @@ html{scroll-padding-top:var(--nav-height) !important;}
     </nav>
     <div class="header-actions">
       <div class="theme-toggle" role="group" aria-label="Theme">
-        <button type="button" id="lightBtn" class="active" aria-pressed="true">Light</button>
-        <button type="button" id="darkBtn" aria-pressed="false">Dark</button>
+        <button type="button" id="lightBtn" class="active" aria-pressed="true" aria-label="Use light theme" title="Light theme">
+          <svg class="theme-icon" viewBox="0 0 24 24" aria-hidden="true">
+            <circle cx="12" cy="12" r="4"></circle>
+            <path d="M12 2v2M12 20v2M4.93 4.93l1.42 1.42M17.65 17.65l1.42 1.42M2 12h2M20 12h2M4.93 19.07l1.42-1.42M17.65 6.35l1.42-1.42"></path>
+          </svg>
+          <span>Light</span>
+        </button>
+        <button type="button" id="darkBtn" aria-pressed="false" aria-label="Use dark theme" title="Dark theme">
+          <svg class="theme-icon" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M20.2 14.4A8.5 8.5 0 0 1 9.6 3.8 8.5 8.5 0 1 0 20.2 14.4Z"></path>
+          </svg>
+          <span>Dark</span>
+        </button>
       </div>
       <a class="btn primary nav-pilot-cta" href="#waitlist" id="navCta">Join the Pilot</a>
       <button class="menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false" aria-controls="mobileNav">
@@ -1564,110 +2805,118 @@ html{scroll-padding-top:var(--nav-height) !important;}
 <section class="hero">
   <div class="wrap hero-grid">
     <div class="reveal">
-      <span class="stamp"><span class="dot"></span> Enterprise Partnering Experience</span>
-      <h1>Less to Chase.<br><span class="accent">More to Grow.</span></h1>
-      <p class="lead">NAVEGAIT is an Enterprise Partnering Experience (EPX) built first for colleges and institutions to build structured, repeatable relationships with enterprise partners — across projects, workshops, visits, research, hiring and strategic collaborations. The model can later extend to SMEs and service partners.</p>
+      <span class="stamp"><span class="dot"></span> Now piloting with founding enterprises</span>
+      <h1>Less to chase.<br><span class="accent">More to grow.</span></h1>
+      <p class="lead">Engage partners directly, or bring in the Partner Office when fulfilment needs coordination. NAVEGAIT keeps requests, communication and delivery connected in one workspace.</p>
       <div class="hero-actions">
-        <a class="btn primary" href="#waitlist">Start an Engagement →</a>
-        <a class="btn outline" href="#platform">Explore the platform →</a>
+        <a class="btn primary" href="#waitlist">Join the pilot →</a>
+        <a class="btn outline" href="#how-it-works">See how it works →</a>
       </div>
       <div class="social-proof">
-        <span class="avatar-stack" aria-hidden="true"><span>IN</span><span>EN</span><span>SM</span></span>
-        <p>One relationship. Multiple opportunities. One place to manage.</p>
+        <span class="avatar-stack" aria-hidden="true"><span>TS</span><span>PX</span><span>AB</span></span>
+        <p>For enterprise teams that need trusted partners, governed execution and less follow-up.</p>
       </div>
     </div>
 
     <div class="reveal card pod-card" aria-hidden="true">
       <div class="pod-top">
-        <div class="who">NAVEGAIT Partner Office</div>
-        <div class="pod-status"><span class="dot"></span> Engagement ready</div>
+        <div class="who">Partner Office<br><span class="refcode">FILE — EPX/ENT/0084</span></div>
+        <div class="pod-status"><span class="dot"></span> Online · ready</div>
       </div>
-      <div class="pod-people">
-        <div class="pod-person"><span class="av">IN</span><div><b>Institution</b><span>Industry engagement needs</span></div></div>
-        <div class="pod-person"><span class="av">EN</span><div><b>Enterprise</b><span>Capabilities &amp; opportunities</span></div></div>
-        <div class="pod-person"><span class="av">PO</span><div><b>Partner Office</b><span>Managed coordination &amp; governance</span></div></div>
+      <div class="office-capabilities">
+        <div class="office-capability"><span class="cap-icon">01</span><div><b>Source &amp; onboard</b><span>Capability matching, KYC and partner readiness.</span></div></div>
+        <div class="office-capability"><span class="cap-icon">02</span><div><b>Coordinate fulfilment</b><span>Production, QC, logistics and installation.</span></div></div>
+        <div class="office-capability"><span class="cap-icon">03</span><div><b>Govern the engagement</b><span>Milestones, evidence, renewals and exceptions.</span></div></div>
       </div>
       <div class="pod-feed">
-        <div class="pod-msg you">"We are seeking industry partners for academic projects."</div>
-        <div class="pod-reply"><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg> Relevant enterprise partners shortlisted and engagement request routed.</div>
-        <div class="pod-msg you">"We want to run a campus industry event and invite sponsors."</div>
-        <div class="pod-reply"><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg> Requirements, partner options, sponsor packages, event branding and schedule brought into one workspace.</div>
+        <div class="pod-msg you">"Need 500 product boxes in Pune with artwork approval, production QC and delivery tracking."</div>
+        <div class="pod-reply"><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg> Partner Office matched capability, requested KYC, coordinated production and queued QC.</div>
+        <div class="pod-msg you">"Keep the partner renewal and compliance review moving."</div>
+        <div class="pod-reply"><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg> Renewal checklist prepared, risks flagged and next action assigned.</div>
       </div>
       <div class="pod-actions">
-        <a class="btn outline" href="#waitlist">Start a request</a>
-        <a class="btn outline" href="#partner-office">Partner Office</a>
+        <a class="btn outline" href="#waitlist">Call</a>
+        <a class="btn outline" href="#waitlist">Send a request</a>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ============================================================ NAVEGAIT ENGAGEMENT NETWORK -->
-<section id="engagements" class="tinted">
-  <div class="wrap">
-    <div class="section-head reveal">
-      <div class="eyebrow teal">Enterprise Partnering Experience</div>
-      <h2>What NAVEGAIT enables</h2>
-      <p class="lead">Start with one engagement. Manage the work, outcomes and next opportunity in one place.</p>
-    </div>
-    <div class="grid grid-4 reveal">
-      <div class="card svc-card"><span class="snum">01</span><h3>Discover</h3><p>Find enterprise partners by capability, industry, geography and need.</p></div>
-      <div class="card svc-card"><span class="snum">02</span><h3>Engage</h3><p>Create structured requests for projects, internships, workshops, visits, research and hiring.</p></div>
-      <div class="card svc-card"><span class="snum">03</span><h3>Deliver</h3><p>Manage requirements, proposals, schedules, documents, milestones and deliverables in one record.</p></div>
-      <div class="card svc-card"><span class="snum">04</span><h3>Grow</h3><p>Turn activities into recurring relationships, strategic collaborations and measurable outcomes.</p></div>
-    </div>
-    <div class="engagement-strip reveal">
-      <span>Internships</span><span>Academic Projects</span><span>Guest Lectures</span><span>Workshops</span><span>Industry Visits</span><span>Hackathons</span><span>Research</span><span>Hiring &amp; Careers</span><span>Branding &amp; Sponsorships</span>
-    </div>
-    <div class="opportunity-band reveal">
-      <div><span class="eyebrow teal">WHAT IT ENABLES</span><h3>Add visibility to the right event.</h3><p>Institutions and enterprises can approach an engaged partner directly or ask the Partner Office to source, package and coordinate event branding, advertising, sponsorships, co-branded content and visibility before, during or after an engagement.</p></div>
-      <div class="opportunity-grid"><span>Brand partner</span><span>Event sponsor</span><span>Campus advertising</span><span>Co-branded programme</span><span>Exhibition / activation</span><span>Post-event visibility</span></div>
-    </div>
-  </div>
-</section>
-
-<!-- ============================================================ NAVEGAIT PARTNER OFFICE CONTROL LAYER -->
-<section id="partner-office">
+<!-- ============================================================ REAL PEOPLE BEHIND THE PLATFORM -->
+<span id="engagements" class="section-anchor" aria-hidden="true"></span>
+<section id="team">
   <div class="wrap grid grid-2" style="align-items:center">
     <div class="reveal">
-      <div class="eyebrow">NAVEGAIT Partner Office</div>
-      <h2>How the Partner Office fits in</h2>
-      <p class="lead" style="margin-top:14px">The platform is the shared system of record. The Partner Office adds managed coordination when discovery, outreach, documentation or relationship support is needed. It can also structure the commercial and visibility layer around an event — matching sponsorship, advertising, branding, exhibition and activation opportunities to relevant engaged partners.</p>
-      <div class="office-model-note" style="margin-top:18px;padding:14px 16px;border:1px solid var(--line);border-radius:12px;background:var(--paper-dim);font-size:13px;line-height:1.55;color:var(--ink-soft)"><strong>Digital platform. Managed relationship layer.</strong> Direct engagement can stay direct; the Partner Office steps in when sourcing, coordination or governance is needed.</div>
-      <a class="btn dark" href="#how-it-works" style="margin-top:22px">See the engagement lifecycle →</a>
+      <div class="eyebrow">Partner Office</div>
+      <h2>Partner Office: the execution layer behind the relationship.</h2>
+      <p class="lead" style="margin-top:14px">The Partner Office turns partner relationships into completed work — from sourcing and onboarding to production, QC, delivery, installation and renewals. Enterprises stay in control and can engage approved partners directly.</p>
+      <div class="capability-list">
+        <span>Partner discovery &amp; matching</span><span>Onboarding &amp; KYC</span><span>Quote &amp; specification coordination</span><span>Artwork &amp; approval management</span><span>Production &amp; fulfilment</span><span>QC &amp; delivery tracking</span><span>Installation coordination</span><span>Renewals &amp; performance follow-up</span>
+      </div>
+      <a class="btn dark" href="#how-it-works" style="margin-top:22px">See how it works →</a>
     </div>
     <div class="reveal card office-shot">
       <div class="workspace-mini" style="border-radius:12px;overflow:hidden;border:1px solid var(--line)">
-        <div style="background:var(--navy);color:#fff;padding:12px 16px;font-size:12px;font-family:var(--display);font-weight:700">navegait.com/partner-office</div>
+        <div style="background:var(--navy);color:#fff;padding:12px 16px;font-size:12px;font-family:var(--display);font-weight:700">app.navegait.com/workspace/dashboard</div>
         <div style="padding:20px;background:var(--card)">
           <div class="grid grid-4" style="gap:12px;margin-bottom:16px">
-            <div><b style="font-family:var(--display);font-size:20px;color:var(--navy)">48</b><br><span style="font-size:11.5px;color:var(--ink-faint)">Active partners</span></div>
-            <div><b style="font-family:var(--display);font-size:20px;color:var(--navy)">26</b><br><span style="font-size:11.5px;color:var(--ink-faint)">Active engagements</span></div>
-            <div><b style="font-family:var(--display);font-size:20px;color:var(--navy)">14</b><br><span style="font-size:11.5px;color:var(--ink-faint)">Upcoming activities</span></div>
-            <div><b style="font-family:var(--display);font-size:20px;color:var(--navy)">9</b><br><span style="font-size:11.5px;color:var(--ink-faint)">Open requests</span></div>
+            <div><b style="font-family:var(--display);font-size:20px;color:var(--navy)">84</b><br><span style="font-size:11.5px;color:var(--ink-faint)">Active suppliers</span></div>
+            <div><b style="font-family:var(--display);font-size:20px;color:var(--navy)">42</b><br><span style="font-size:11.5px;color:var(--ink-faint)">Active requests</span></div>
+            <div><b style="font-family:var(--display);font-size:20px;color:var(--navy)">₹24.8Cr</b><br><span style="font-size:11.5px;color:var(--ink-faint)">Managed spend (YTD)</span></div>
+            <div><b style="font-family:var(--display);font-size:20px;color:var(--navy)">94%</b><br><span style="font-size:11.5px;color:var(--ink-faint)">On-time fulfillment</span></div>
           </div>
-          <div style="font-size:12.5px;color:var(--ink-faint);border-top:1px solid var(--line);padding-top:14px">Partner discovery · engagement coordination · career pathways · sponsorships · event visibility · outcomes</div>
+          <div style="font-size:12.5px;color:var(--ink-faint);border-top:1px solid var(--line);padding-top:14px">Upcoming milestones · Packaging partner, Signage partner, Employee kits</div>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ============================================================ A DAY WITH NAVEGAIT -->
+<!-- ============================================================ A DAY INSIDE NAVEGAIT -->
 <section id="day-in-life" class="tinted">
   <div class="wrap">
     <div class="section-head reveal">
-      <div class="eyebrow teal">A Day</div>
-      <h2>Inside NAVEGAIT: From request to opportunity</h2>
-      <p class="lead">One engagement record connects conversations, activities, documents, decisions, visibility and outcomes across the institution, enterprise and Partner Office.</p>
+      <div class="eyebrow teal">Inside NAVEGAIT</div>
+      <h2>From request to delivery. One connected work record.</h2>
+      <p class="lead">Requests, evidence, decisions and updates stay connected in one governed Activity feed.</p>
     </div>
     <div class="day-timeline reveal">
-      <div class="day-item"><div class="day-time">09:15</div><div class="day-body"><p class="msg">"Find industry partners for our academic data-science projects."</p><p class="reply">Partner profiles matched by capability, location and engagement interest.</p></div><span class="status-pill done">Matched</span></div>
-      <div class="day-item"><div class="day-time">11:30</div><div class="day-body"><p class="msg">"We can offer a 2-day workshop and an industry project brief."</p><p class="reply">Opportunity captured, participants aligned and proposal workspace opened.</p></div><span class="status-pill in-flight">In flight</span></div>
-      <div class="day-item"><div class="day-time">14:10</div><div class="day-body"><p class="msg">"Confirm the visit, speakers, requirements and schedule."</p><p class="reply">Calendar, documents, contacts and milestones coordinated from the engagement workspace.</p></div><span class="status-pill needs-you">Needs you</span></div>
-      <div class="day-item"><div class="day-time">15:40</div><div class="day-body"><p class="msg">"Can an engaged enterprise sponsor the campus showcase and carry its brand into the event?"</p><p class="reply">Sponsor package, brand placement, activation rights and deliverables are linked to the same engagement record.</p></div><span class="status-pill in-flight">Sponsored</span></div>
-      <div class="day-item"><div class="day-time">17:20</div><div class="day-body"><p class="msg">"Capture the outcome and identify the next collaboration."</p><p class="reply">Feedback, hiring leads, sponsor outcomes and next opportunities are recorded for both sides.</p></div><span class="status-pill done">Done</span></div>
+      <div class="day-item">
+        <div class="day-time">11:05</div>
+        <div class="day-body">
+          <p class="msg">"Onboard Packaging partner for the Q3 campaign — usual production requirements."</p>
+          <p class="reply">KYC and compliance docs requested automatically, verified against policy, and routed for sign-off.</p>
+        </div>
+        <span class="status-pill done">Done</span>
+      </div>
+      <div class="day-item">
+        <div class="day-time">13:40</div>
+        <div class="day-body">
+          <p class="msg">"Packaging partner's on-time delivery dropped below SLA this month — what happened?"</p>
+          <p class="reply">Performance trend pulled, root cause flagged as a subcontractor delay — summary ready for review.</p>
+        </div>
+        <span class="status-pill needs-you">Needs you</span>
+      </div>
+      <div class="day-item">
+        <div class="day-time">15:20</div>
+        <div class="day-body">
+          <p class="msg">"Renew the Signage partner contract before it lapses next week."</p>
+          <p class="reply">Renewal terms drafted from the existing agreement and sent to legal for redline — awaiting counter-sign.</p>
+        </div>
+        <span class="status-pill in-flight">In flight</span>
+      </div>
+      <div class="day-item">
+        <div class="day-time">16:50</div>
+        <div class="day-body">
+          <p class="msg">"Find two more logistics partners for the Bengaluru expansion, vetted and ready by Friday."</p>
+          <p class="reply">Six candidates shortlisted against your risk and pricing criteria — two flagged as best-fit matches.</p>
+        </div>
+        <span class="status-pill done">Done</span>
+      </div>
     </div>
-    <div class="day-note reveal"><strong>One partnership. Many possibilities.</strong> Guest lecture → workshop → academic project → internship → hiring pathway → industry visit → sponsored showcase → research collaboration → strategic partnership.</div>
+    <div class="day-note reveal">
+      <strong>Nothing books, pays, or gets approved on its own.</strong> EPX Intelligence prepares and drafts everything — every request that touches money, risk, or a signature is reviewed by the relevant enterprise, partner and/or Partner Office participants before it moves.
+    </div>
   </div>
 </section>
 
@@ -1675,64 +2924,86 @@ html{scroll-padding-top:var(--nav-height) !important;}
 <section id="how-it-works">
   <div class="wrap">
     <div class="center-head reveal">
-      <div class="eyebrow">Engagement lifecycle</div>
-      <h2>How it works: one shared engagement record</h2>
-      <p class="lead">NAVEGAIT makes partnerships easier to start, coordinate, measure and grow — including event visibility.</p>
+      <div class="eyebrow">How it works</div>
+      <h2>A Partner Office you barely have to chase.</h2>
+      <p class="lead">Set the rules once. Then raise what you need and follow progress without chasing.</p>
     </div>
     <div class="flow-steps reveal">
-      <div class="card flow-step"><span class="fnum">01</span><h3>Request</h3><p>An institution or enterprise creates a request with the objective, timing and requirements.</p></div>
-      <div class="card flow-step"><span class="fnum">02</span><h3>Match</h3><p>Relevant partners and existing relationships are surfaced. Requests can stay direct or route through the Partner Office.</p></div>
-      <div class="card flow-step"><span class="fnum">03</span><h3>Coordinate</h3><p>Requirements, participants, schedules, documents and milestones stay connected in the workspace.</p></div>
-      <div class="card flow-step"><span class="fnum">04</span><h3>Activate</h3><p>Add optional branding, advertising, sponsorship or activation — directly or through the Partner Office.</p></div>
-      <div class="card flow-step"><span class="fnum">05</span><h3>Grow</h3><p>Capture outcomes, feedback and relationship history — then identify the next opportunity.</p></div>
+      <div class="card flow-step">
+        <span class="fnum">01</span>
+        <h3>Set up your enterprise context</h3>
+        <p>Business units, partner categories, policies and risk thresholds — set once.</p>
+      </div>
+      <div class="card flow-step">
+        <span class="fnum">02</span>
+        <h3>Message NAVEGAIT</h3>
+        <p>Workspace, email or call — "Onboard this partner, renew this contract, find two logistics partners."</p>
+      </div>
+      <div class="card flow-step">
+        <span class="fnum">03</span>
+        <h3>NAVEGAIT + platform coordinate</h3>
+        <p>NAVEGAIT coordinates the workflow. Enterprises stay connected to partners, with Partner Office support when fulfilment needs coordination.</p>
+      </div>
+      <div class="card flow-step">
+        <span class="fnum">04</span>
+        <h3>Tracked until it's done</h3>
+        <p>Every request stays visible in Activity until it is closed.</p>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- ============================================================ ENGAGEMENT TYPES -->
+<!-- ============================================================ WHAT NAVEGAIT HANDLES -->
 <section id="handles" class="tinted">
   <div class="wrap">
     <div class="section-head reveal">
-      <div class="eyebrow">One platform · many ways to engage</div>
-      <h2>Who it is built for</h2>
-      <p class="lead">Institution-first today. Enterprise-ready by design. Later: SMEs and service partners.</p>
+      <div class="eyebrow">What NAVEGAIT handles</div>
+      <h2>One execution layer for partner-led work.</h2>
+      <p class="lead">Across print, workplace, technology, learning, fulfilment and governance — with oversight where it matters.</p>
     </div>
     <div class="grid grid-4 svc-grid reveal">
-      <div class="card svc-card launch-focus"><span class="snum">01</span><h3>Internships</h3><p>Structured enterprise opportunities connected to institutional requirements and calendars.</p></div>
-      <div class="card svc-card launch-focus"><span class="snum">02</span><h3>Academic Projects</h3><p>Bring real business problems into institution-led projects with clear briefs and outcomes.</p></div>
-      <div class="card svc-card"><span class="snum">03</span><h3>Lectures &amp; Workshops</h3><p>Enable practitioners to share industry knowledge through planned sessions and programmes.</p></div>
-      <div class="card svc-card"><span class="snum">04</span><h3>Industry Visits</h3><p>Coordinate structured visits, participants, logistics, schedules and follow-ups.</p></div>
-      <div class="card svc-card"><span class="snum">05</span><h3>Hackathons &amp; Challenges</h3><p>Convert business challenges into collaborative academic engagement.</p></div>
-      <div class="card svc-card"><span class="snum">06</span><h3>Research Collaboration</h3><p>Connect institutional capability with enterprise problems and applied research opportunities.</p></div>
-      <div class="card svc-card"><span class="snum">07</span><h3>Campus Engagement</h3><p>Plan recurring enterprise–institution programmes across the academic calendar.</p></div>
-      <div class="card svc-card"><span class="snum">08</span><h3>Strategic Partnerships</h3><p>Grow repeated activities into deeper, measurable institutional relationships.</p></div>
-      <div class="card svc-card sponsor-card"><span class="snum">09</span><h3>Branding, Advertising &amp; Sponsorships</h3><p>Enable institutions and enterprise partners to create or fund visibility around eligible engagements — directly or through Partner Office-managed packages.</p></div>
+      <div class="card svc-card"><span class="snum">01</span><h3>Print &amp; brand</h3><p>Printing, packaging, signage, displays, events and corporate collateral.</p></div>
+      <div class="card svc-card"><span class="snum">02</span><h3>Facilities &amp; workplace</h3><p>Workplace services, facilities support, housekeeping, security and admin partners.</p></div>
+      <div class="card svc-card"><span class="snum">03</span><h3>Technology services</h3><p>IT services, software, infrastructure, cloud, data and specialist technology partners.</p></div>
+      <div class="card svc-card"><span class="snum">04</span><h3>People &amp; learning</h3><p>Academia engagement, staffing, internships, training and capability partners.</p></div>
+      <div class="card svc-card"><span class="snum">05</span><h3>ESG &amp; community</h3><p>CSR delivery partners, sustainability programs, NGOs and community initiatives.</p></div>
+      <div class="card svc-card"><span class="snum">06</span><h3>Fulfilment operations</h3><p>Production coordination, logistics, installation and last-mile execution.</p></div>
+      <div class="card svc-card"><span class="snum">07</span><h3>Quality &amp; governance</h3><p>QC, compliance, evidence, risk, audit readiness, contracts and renewals.</p></div>
+      <div class="card svc-card"><span class="snum">08</span><h3>Partner intelligence</h3><p>Capability matching, risk flags, renewal alerts and performance insights.</p></div>
     </div>
   </div>
 </section>
 
 <!-- ============================================================ INSIDE THE PLATFORM (WEB + MOBILE MOCKUPS) -->
+
+<div class="epx-bridge">
+  <span class="eyebrow teal">NAVEGAIT EPX</span>
+  <strong>Enterprise Partnering Experience</strong>
+  <p>Connecting enterprise teams, partners and Partner Office support in one execution experience.</p>
+</div>
+
 <section id="platform">
   <div class="wrap">
     <div class="section-head reveal">
-      <div class="eyebrow">Platform</div>
-      <h2>Inside NAVEGAIT: Platform walkthrough</h2>
-      <p class="lead">One platform, two focused experiences. Institutions/colleges and enterprise partners manage discovery, requests, activity, calendar, documents, career pathways, sponsorships and outcomes, with the Partner Office providing managed coordination when needed.</p>
+      <div class="eyebrow">Inside the platform</div>
+      <h2>Enterprise and partner teams connected. Partner Office when needed.</h2>
+      <p class="lead">One operating record, two focused surfaces: Enterprise Workspace on web and Partner Workspace on mobile. Home, New request, Activity and Calendar stay aligned to the same work.</p>
     </div>
 
     <!-- Platform overview -->
     <div class="platform-overview reveal">
       <div class="platform-overview-copy">
-        <span class="eyebrow teal">One operating model · two focused surfaces</span>
-        <h3>Manage opportunities, not spreadsheets.</h3>
-        <p>Work directly with an engaged partner or route through the Partner Office. Every request becomes a connected engagement record.</p>
+        <span class="eyebrow teal">Two surfaces · one operating record</span>
+        <h3>Enterprise Workspace shows the full picture. Partner Workspace keeps partner teams moving, with Partner Office support visible when fulfilment needs coordination.</h3>
+        <p>Requests, specifications, files, quotes, milestones and delivery updates stay on one work record. Teams can work directly; the Partner Office can step in for sourcing, onboarding, production, QC, delivery, installation or renewals.</p>
+        <p class="lead" style="margin-top:14px">Enterprise ↔ Partner engagement stays direct when both sides are connected. Partner Office is an optional fulfilment route when sourcing, coordination, QC, delivery or installation needs support.</p>
         <div class="platform-capabilities">
-          <span>Dashboard</span><span>Activity</span><span>New request</span><span>Calendar</span><span>Partner profile</span><span>Event visibility</span><span>Outcomes</span>
+          <span>Dashboard</span><span>Activity</span><span>New request</span><span>Calendar</span><span>Partner contact</span><span>Partner Office</span><span>QC &amp; delivery</span><span>Renewals</span>
         </div>
       </div>
       <div class="platform-mini-visual">
         <div class="mini-browser">
-          <div class="mini-browser-bar"><i></i><i></i><i></i><span>enterprise.navegait.com/engagements</span></div>
+          <div class="mini-browser-bar"><i></i><i></i><i></i><span>enterprise.navegait.com</span></div>
           <div class="mini-browser-content">
             <div class="mini-side"></div>
             <div class="mini-main">
@@ -1745,47 +3016,9 @@ html{scroll-padding-top:var(--nav-height) !important;}
         <div class="mini-phone">
           <div class="mini-phone-notch"></div>
           <div class="mini-phone-content">
-            <b>Institution Engagement</b><span>Institution • Enterprise • Partner Office</span><i></i><i></i><i></i>
+            <b>Good afternoon</b><span>Partner Workspace</span><i></i><i></i><i></i>
           </div>
         </div>
-      </div>
-    </div>
-
-    <div class="route-strip reveal" aria-label="Enterprise and partner routing options">
-      <div class="route-intro">
-        <span class="eyebrow teal">Route the work, not the relationship</span>
-        <h3>Choose the route. Keep the relationship.</h3>
-        <p>Direct when already engaged. Partner Office when support or follow-up is needed.</p>
-      </div>
-      <div class="route-card">
-        <span class="route-role">INSTITUTION / COLLEGE</span>
-        <strong>Partner direct</strong>
-        <span>Continue with an already engaged partner.</span>
-      </div>
-      <div class="route-card route-card-accent">
-        <span class="route-role">INSTITUTION / COLLEGE</span>
-        <strong>Via Partner Office</strong>
-        <span>Use managed capacity for sourcing, onboarding, governance or coordination.</span>
-      </div>
-      <div class="route-card">
-        <span class="route-role">PARTNER</span>
-        <strong>Enterprise direct</strong>
-        <span>Partner sends to an engaged enterprise.</span>
-      </div>
-      <div class="route-card route-card-accent">
-        <span class="route-role">PARTNER</span>
-        <strong>Via Partner Office</strong>
-        <span>Request introductions, new opportunities, coordination or escalation.</span>
-      </div>
-      <div class="route-card sponsor-route">
-        <span class="route-role">BOTH SIDES</span>
-        <strong>Brand / sponsor direct</strong>
-        <span>Agree eligible event branding, advertising or sponsorship directly with an engaged partner.</span>
-      </div>
-      <div class="route-card route-card-accent sponsor-route">
-        <span class="route-role">BOTH SIDES</span>
-        <strong>Partner Office package</strong>
-        <span>Ask NAVEGAIT to source, package, coordinate and track sponsor or visibility opportunities.</span>
       </div>
     </div>
 
@@ -1793,100 +3026,101 @@ html{scroll-padding-top:var(--nav-height) !important;}
     <div class="tour-block reveal">
       <div class="tour-head">
         <h3>Home</h3>
-        
+        <span class="refcode">FILE — EPX/ENT/0084</span>
       </div>
       <div class="tour-inline">
         <div class="workspace-shell-wrap">
           <div class="tour-role"><span class="tag enterprise">Enterprise</span> Web workspace</div>
           <div class="workspace-shell">
             <div class="workspace-topbar"><span class="wdot"></span><span class="wdot"></span><span class="wdot"></span>
-              <span class="wlabel">navegait.com/enterprise/dashboard</span></div>
-            <div class="workspace-band enterprise">Enterprise workspace — Partner engagements</div>
+              <span class="mock-brand">Enterprise Workspace</span><span class="wlabel">app.navegait.com/workspace/dashboard</span></div>
+            <div class="workspace-band enterprise"><span>Enterprise workspace</span><small>Requests · Partners · Partner Office</small></div>
             <div class="workspace-nav">
-              <div class="wnav-tab active"><svg viewBox="0 0 24 24"><path d="M4 11l8-7 8 7M6 10v10h5v-6h2v6h5V10"/></svg><span>Home</span></div>
-              <div class="wnav-tab"><svg viewBox="0 0 24 24"><path d="M3 12h4l2 6 4-14 2 8h6"/></svg><span>Activity</span></div>
-              <div class="wnav-tab"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 8v8M8 12h8"/></svg><span>New request</span></div>
-              <div class="wnav-tab"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg><span>Calendar</span></div>
-              <div class="wnav-tab"><svg viewBox="0 0 24 24"><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4M10 17l5-5-5-5M15 12H3"/></svg><span>Profile</span></div>
+              <div class="wnav-tab active" role="tab" tabindex="0" aria-selected="true"><svg viewBox="0 0 24 24"><path d="M4 11l8-7 8 7M6 10v10h5v-6h2v6h5V10"/></svg><span>Home</span></div>
+              <div class="wnav-tab" role="tab" tabindex="0" aria-selected="false"><svg viewBox="0 0 24 24"><path d="M3 12h4l2 6 4-14 2 8h6"/></svg><span>Activity</span></div>
+              <div class="wnav-tab" role="tab" tabindex="0" aria-selected="false"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 8v8M8 12h8"/></svg><span>New request</span></div>
+              <div class="wnav-tab" role="tab" tabindex="0" aria-selected="false"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg><span>Calendar</span></div>
+              <div class="wnav-tab" role="tab" tabindex="0" aria-selected="false"><svg viewBox="0 0 24 24"><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4M10 17l5-5-5-5M15 12H3"/></svg><span>Profile</span></div>
             </div>
             <div class="workspace-body">
               <div class="wstats">
-                <div class="wstat"><b>18</b><span>Active partners</span><em>↑ 12% vs last month</em></div>
-                <div class="wstat"><b>11</b><span>Active engagements</span><em>↑ 8% vs last month</em></div>
-                <div class="wstat"><b>₹8.4 Cr</b><span>Partner / sponsor value</span><em>↑ 15% vs last month</em></div>
-                <div class="wstat"><b>94%</b><span>Workstreams on track</span><em class="down">↓ 3% vs last month</em></div>
+                <div class="wstat"><b>84</b><span>Active partners</span><em>↑ 12% vs last month</em></div>
+                <div class="wstat"><b>42</b><span>Active requests</span><em>↑ 8% vs last month</em></div>
+                <div class="wstat"><b>₹18.6 L</b><span>Managed spend</span><em>↑ 15% this period</em></div>
+                <div class="wstat"><b>94%</b><span>On-time fulfillment</span><em class="down">↓ 3% vs last month</em></div>
               </div>
               <div class="wtwocol">
                 <div class="wpanel">
-                  <h5>Partner value &amp; sponsorships</h5>
+                  <h5>Spend by category (YTD)</h5>
                   <div class="wbars">
-                    <i style="height:92%"></i><i style="height:74%"></i><i style="height:62%"></i>
+                    <i style="height:94%"></i><i style="height:74%"></i><i style="height:62%"></i>
                     <i style="height:48%"></i><i style="height:34%"></i><i style="height:20%"></i>
                   </div>
                 </div>
                 <div class="wpanel">
-                  <h5>Partner relationship health</h5>
-                  <div class="wdonut"><span>18 Partners</span></div>
+                  <h5>Supplier performance</h5>
+                  <div class="wdonut"><span>84 Total</span></div>
                   <div class="wlegend">
-                    <div><i style="background:var(--teal)"></i> Strong — 56%</div>
-                    <div><i style="background:var(--green)"></i> On track — 28%</div>
-                    <div><i style="background:var(--gold)"></i> Watch — 11%</div>
+                    <div><i style="background:var(--teal)"></i> Top suppliers — 36%</div>
+                    <div><i style="background:var(--green)"></i> On track — 44%</div>
+                    <div><i style="background:var(--gold)"></i> Watch — 15%</div>
                     <div><i style="background:#E7B9B0"></i> At risk — 5%</div>
                   </div>
                 </div>
               </div>
               <div class="wpanel">
-                <h5>Upcoming engagements &amp; milestones</h5>
+                <h5>Upcoming production milestones &amp; recent activity</h5>
                 <ul class="wlist">
-                  <li><div><b>Industry workshop + sponsor activation</b><small>Creative + delivery partners</small></div><span>20 May</span></li>
-                  <li><div><b>Campus industry showcase</b><small>Community Health Network</small></div><span>25 May</span></li>
-                  <li><div><b>Engagement outcomes pack</b><small>Web + analytics — submitted</small></div><span>2h ago</span></li>
+                  <li><div><b>Product boxes — production</b><small>Packaging partner</small></div><span>20 May</span></li>
+                  <li><div><b>Office signage — artwork</b><small>Signage partner</small></div><span>25 May</span></li>
+                  <li><div><b>Employee kits</b><small>QC scheduled — merchandise partner</small></div><span>2h ago</span></li>
                 </ul>
               </div>
             </div>
           </div>
         </div>
         <div class="phone-col">
-          <div class="tour-role"><span class="tag partner">Institution / College</span> Mobile app</div>
+          <div class="tour-role"><span class="tag partner">Partner</span> Mobile workspace</div>
           <div class="phone-mock" aria-hidden="true">
             <div class="phone-mock-inner">
               <div class="phone-mock-notch"></div>
               <div class="phone-appbar phone-appbar-light">
+                <div class="mock-brand">Partner Workspace</div>
                 <div class="mobile-greeting">
                   <span class="mobile-avatar">AK</span>
-                  <div><span class="app-title">Good afternoon</span><span class="mobile-subtitle">Institution · Enterprise · Partner Office</span></div>
+                  <div><span class="app-title">Good afternoon</span><span class="mobile-subtitle">Partner Office</span></div>
                 </div>
-                <span class="app-status"><span class="dot"></span> Service · ready</span>
+                <span class="app-status"><span class="dot"></span> Online · ready</span>
               </div>
               <div class="phone-body">
                 <div class="mobile-pod-card">
-                  <div class="mobile-pod-label">YOUR ENGAGEMENTS</div>
+                  <div class="mobile-pod-label">MANAGED PARTNER OFFICE</div>
                   <div class="mobile-pod-people">
                     <span class="pod-mini">RM</span><span class="pod-mini active">AK</span><span class="pod-mini">SN</span>
                   </div>
-                  <div class="mobile-pod-copy"><b>Institution · Enterprise · Partner Office</b><span>Track requests, activities and next steps</span></div>
+                  <div class="mobile-pod-copy"><b>Partner Office</b><span>Source · onboard · coordinate · QC · deliver</span></div>
                   <div class="mobile-actions"><span>☎ Call</span><span>◉ Message</span></div>
                 </div>
-                <div class="mobile-request-bar"><span class="plus">＋</span><span>Start an engagement request…</span><span class="mic">⌁</span></div>
-                <div class="phone-section-label">Active work <span>View activity (9)</span></div>
+                <div class="mobile-request-bar"><span class="plus">＋</span><span>Ask NAVEGAIT anything…</span><span class="mic">⌁</span></div>
+                <div class="phone-section-label">Active now <span>See all (9)</span></div>
                 <div class="phone-card mobile-active-card">
                   <div class="pc-topline"><span class="pc-status done">IN PROGRESS</span><span>REQUEST</span></div>
-                  <div class="pc-msg">Enterprise project request</div>
-                  <div class="pc-sub">NAVEGAIT is coordinating enterprise options against the approved brief.</div>
+                  <div class="pc-msg">500 product boxes</div>
+                  <div class="pc-sub">NAVEGAIT is coordinating options against your brief.</div>
                   <div class="progress-track"><i></i></div>
                 </div>
                 <div class="phone-card">
                   <div class="pc-time">TODAY · 16:20</div>
-                  <div class="pc-msg">Update engagement / event plan</div>
-                  <div class="pc-sub">2 items pending</div>
+                  <div class="pc-msg">Review supplier compliance file</div>
+                  <div class="pc-sub">2 documents pending</div>
                 </div>
               </div>
               <div class="phone-tabbar">
-                <div class="phone-tab active"><svg viewBox="0 0 24 24"><path d="M4 11l8-7 8 7M6 10v10h5v-6h2v6h5V10"/></svg><span>Home</span></div>
-                <div class="phone-tab"><svg viewBox="0 0 24 24"><path d="M3 12h4l2 6 4-14 2 8h6"/></svg><span>Activity</span></div>
-                <div class="phone-tab"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 8v8M8 12h8"/></svg><span>New</span></div>
-                <div class="phone-tab"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg><span>Calendar</span></div>
-                <div class="phone-tab"><svg viewBox="0 0 24 24"><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4M10 17l5-5-5-5M15 12H3"/></svg><span>Profile</span></div>
+                <div class="phone-tab active" role="tab" tabindex="0" aria-selected="true"><svg viewBox="0 0 24 24"><path d="M4 11l8-7 8 7M6 10v10h5v-6h2v6h5V10"/></svg><span>Home</span></div>
+                <div class="phone-tab" role="tab" tabindex="0" aria-selected="false"><svg viewBox="0 0 24 24"><path d="M3 12h4l2 6 4-14 2 8h6"/></svg><span>Activity</span></div>
+                <div class="phone-tab" role="tab" tabindex="0" aria-selected="false"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 8v8M8 12h8"/></svg><span>New</span></div>
+                <div class="phone-tab" role="tab" tabindex="0" aria-selected="false"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg><span>Calendar</span></div>
+                <div class="phone-tab" role="tab" tabindex="0" aria-selected="false"><svg viewBox="0 0 24 24"><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4M10 17l5-5-5-5M15 12H3"/></svg><span>Profile</span></div>
               </div>
             </div>
           </div>
@@ -1899,59 +3133,65 @@ html{scroll-padding-top:var(--nav-height) !important;}
     <div class="tour-block reveal">
       <div class="tour-head">
         <h3>New request</h3>
-        
+        <span class="refcode">FILE — EPX/ENT/0084 · REQ-0842</span>
       </div>
       <div class="tour-inline">
         <div class="workspace-shell-wrap">
           <div class="tour-role"><span class="tag enterprise">Enterprise</span> Web workspace</div>
           <div class="workspace-shell">
             <div class="workspace-topbar"><span class="wdot"></span><span class="wdot"></span><span class="wdot"></span>
-              <span class="wlabel">navegait.com/institution/new-request</span></div>
-            <div class="workspace-band enterprise">Enterprise workspace — Partner engagements</div>
+              <span class="mock-brand">Enterprise Workspace</span><span class="wlabel">app.navegait.com/workspace/new-request</span></div>
+            <div class="workspace-band enterprise"><span>Enterprise workspace</span><small>Requests · Partners · Partner Office</small></div>
             <div class="workspace-nav">
-              <div class="wnav-tab"><svg viewBox="0 0 24 24"><path d="M4 11l8-7 8 7M6 10v10h5v-6h2v6h5V10"/></svg><span>Home</span></div>
-              <div class="wnav-tab"><svg viewBox="0 0 24 24"><path d="M3 12h4l2 6 4-14 2 8h6"/></svg><span>Activity</span></div>
-              <div class="wnav-tab active"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 8v8M8 12h8"/></svg><span>New request</span></div>
-              <div class="wnav-tab"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg><span>Calendar</span></div>
-              <div class="wnav-tab"><svg viewBox="0 0 24 24"><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4M10 17l5-5-5-5M15 12H3"/></svg><span>Profile</span></div>
+              <div class="wnav-tab" role="tab" tabindex="0" aria-selected="false"><svg viewBox="0 0 24 24"><path d="M4 11l8-7 8 7M6 10v10h5v-6h2v6h5V10"/></svg><span>Home</span></div>
+              <div class="wnav-tab" role="tab" tabindex="0" aria-selected="false"><svg viewBox="0 0 24 24"><path d="M3 12h4l2 6 4-14 2 8h6"/></svg><span>Activity</span></div>
+              <div class="wnav-tab active" role="tab" tabindex="0" aria-selected="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 8v8M8 12h8"/></svg><span>New request</span></div>
+              <div class="wnav-tab" role="tab" tabindex="0" aria-selected="false"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg><span>Calendar</span></div>
+              <div class="wnav-tab" role="tab" tabindex="0" aria-selected="false"><svg viewBox="0 0 24 24"><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4M10 17l5-5-5-5M15 12H3"/></svg><span>Profile</span></div>
             </div>
             <div class="workspace-body">
-              <div class="new-request-reference">
-                <div class="request-reference">
-                  <div><b>Request ID / ticket</b><strong>REQ-2026-0188</strong></div>
-                  <span class="request-id">Auto-assigned</span>
-                </div>
-              </div>
-              <div class="request-route-chooser">
-                <div><span>NEW REQUEST</span><strong>Who should this involve?</strong></div>
-                <button class="request-route direct"><b>Engaged partner</b><small>Send directly</small></button>
-                <button class="request-route office"><b>Partner Office</b><small>Coordinate &amp; govern</small></button>
-              </div>
               <div class="wtwocol" style="grid-template-columns:1.3fr .7fr">
                 <div class="wpanel wchat-panel">
-                  <h5>Request thread — Engaged partner / Partner Office</h5>
+                  <h5>New request</h5>
+                  <div class="req-meta"><span class="req-id">REQ-ID <b>REQ-0842</b></span><span class="route-pill">Enterprise request</span></div>
+                  <div class="request-progress" aria-label="Request progress">
+                    <span class="done">Request</span><i></i><span class="current">Route</span><i></i><span>Execute</span><i></i><span>Deliver</span>
+                  </div>
+                  <div class="route-note">Choose who should receive the request. Direct engagement stays direct; Partner Office is used when coordination or fulfilment is needed.</div>
+                  <div class="route-box">
+                    <div><label for="enterprise-route">Send to</label>
+                      <select id="enterprise-route" aria-label="Enterprise request destination">
+                        <option>Partner</option>
+                        <option>Partner Office</option>
+                      </select>
+                    </div>
+                    <div><label for="enterprise-partner">Partner / Partner Office</label>
+                      <select id="enterprise-partner" aria-label="Select partner or Partner Office">
+                        <option>Packaging partner · Pune</option>
+                        <option>Signage partner · Bengaluru</option>
+                        <option>Partner Office · Fulfilment</option>
+                      </select>
+                    </div>
+                  </div>
                   <div class="wchat-feed">
-                    <div class="wchat-msg you">"Find an enterprise partner for our campus career showcase and explore sponsorship."</div>
-                    <div class="wchat-msg office"><b>Partner Office</b>Received — confirming partner fit, sponsor interest and delivery timing.</div>
-                    <div class="wchat-msg you">"Also create brand packages for event signage, digital promotion and an on-campus activation."</div>
-                    <div class="wchat-msg office"><b>Partner Office</b>Partner fit confirmed. Sponsorship options and activation package follow today.</div>
+                    <div class="wchat-msg you">"Need 500 product boxes in Pune by 28 August."</div>
+                    <div class="wchat-msg office"><b>Partner Office · REQ-0842</b>Request received. Coordinating the packaging partner and fulfilment requirements.</div>
+                    <div class="wchat-msg you">"Need artwork approval, production QC and delivery tracking included."</div>
+                    <div class="wchat-msg office"><b>Partner Office</b>Noted — filtering for packaging capability now, I'll flag it in the shortlist.</div>
                   </div>
                   <div class="wcontact-row">
-                    <button class="wcontact-btn"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>Call Partner Office</button>
+                    <button class="wcontact-btn"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>Contact Partner Office</button>
                     <button class="wcontact-btn whatsapp"><svg viewBox="0 0 24 24"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>WhatsApp</button>
                   </div>
-                  <div class="request-governance-note"><b>Partner Office oversight</b><span>Follow-ups, commercial visibility and exceptions are governed here when direct fulfilment needs support.</span></div>
                 </div>
                 <div class="wpanel">
-                  <h5>Reference examples <span class="request-id">ID generated on submission</span></h5>
+                  <h5>Reference examples</h5>
                   <ul class="wref-list">
-                    <li>"Find an enterprise partner for our campus career showcase and explore sponsorship"</li>
-                    <li>"Create a sponsor package for a college industry summit"</li>
-                    <li>"Arrange an enterprise booth / exhibition at the campus event"</li>
-                    <li>"Compare sponsorship and branding proposals from engaged partners"</li>
-                    <li>"Create event branding, digital promotion and post-event visibility"</li>
-                    <li>"Plan a guest lecture, workshop or industry showcase with sponsor activation"</li>
-                    <li>"Follow up on a delayed engagement or sponsor deliverable"</li>
+                    <li>"Source packaging suppliers for the festive campaign"</li>
+                    <li>"Renew packaging supplier contract"</li>
+                    <li>"Onboard a signage supplier for the new office"</li>
+                    <li>"Compare quotes for office branding"</li>
+                    <li>"Escalate a delayed delivery from a current supplier"</li>
                   </ul>
                 </div>
               </div>
@@ -1959,43 +3199,52 @@ html{scroll-padding-top:var(--nav-height) !important;}
           </div>
         </div>
         <div class="phone-col">
-          <div class="tour-role"><span class="tag partner">Institution / College</span> Mobile app</div>
+          <div class="tour-role"><span class="tag partner">Partner</span> Mobile workspace</div>
           <div class="phone-mock" aria-hidden="true">
             <div class="phone-mock-inner">
               <div class="phone-mock-notch"></div>
               <div class="phone-appbar">
+                <div class="mock-brand">Partner Workspace</div>
                 <span class="app-title">New request</span>
-                <span class="app-status"><span class="dot"></span> Institution · Enterprise · Partner Office</span>
+                <span class="app-status"><span class="dot"></span> Partner · ready</span>
               </div>
               <div class="phone-body">
-                <div class="request-reference">
-                  <div><b>Request ID / ticket</b><strong>REQ-2026-0188</strong></div>
-                  <span class="request-id">Auto-assigned</span>
-                </div>
-                <div class="request-route-mobile">
-                  <div class="phone-section-label">SEND / ROUTE REQUEST TO</div>
-                  <div class="mobile-route-grid"><div><b>Engaged enterprise</b><span>Send directly</span></div><div class="selected"><b>Partner Office</b><span>Coordinate &amp; follow up</span></div></div>
+                <div class="req-meta"><span class="req-id">REQ-ID <b>REQ-0842</b></span><span class="route-pill">Partner request</span></div>
+                <div class="route-box">
+                  <div><label for="partner-route">Send request to</label>
+                    <select id="partner-route" aria-label="Partner request destination">
+                      <option selected>Enterprise</option>
+                      <option>Partner Office</option>
+                    </select>
+                  </div>
+                  <div><label for="partner-enterprise">Enterprise / Partner Office</label>
+                    <select id="partner-enterprise" aria-label="Select enterprise or Partner Office">
+                      <option>ABC Foods Pvt Ltd</option>
+                      <option>Nova Retail India</option>
+                      <option>Partner Office · Fulfilment</option>
+                    </select>
+                  </div>
                 </div>
                 <div class="phone-card">
-                  <div class="pc-time">You (Partner) · 10:15</div>
-                  <div class="pc-msg">"Can you match me with 2 campus engagement opportunities and relevant sponsor briefs this quarter?"</div>
+                  <div class="pc-time">You (Partner) · 10:15 · REQ-0842</div>
+                  <div class="pc-msg">"We can fulfil the product-box requirement. Please confirm artwork and delivery details."</div>
                 </div>
                 <div class="phone-card" style="background:var(--paper-dim);border-color:var(--line-strong)">
-                  <div class="pc-time">Partner Office · 10:31</div>
-                  <div class="pc-sub">On it — checking your profile against upcoming education–industry engagements and sponsor opportunities. I’ll share matches by Friday.</div>
+                  <div class="pc-time">Enterprise · 10:31 · REQ-0842</div>
+                  <div class="pc-sub">Received — confirming the production brief, artwork and delivery requirements. We’ll share the next steps shortly.</div>
                 </div>
-                <div class="phone-section-label">Direct enterprise or Partner Office</div>
+                <div class="phone-section-label">Contact Enterprise directly or use Partner Office</div>
                 <div class="phone-contact-row">
-                  <div class="phone-contact-btn"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>Call</div>
-                  <div class="phone-contact-btn whatsapp"><svg viewBox="0 0 24 24"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>WhatsApp</div>
+                  <div class="phone-contact-btn"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>Call Enterprise</div>
+                  <div class="phone-contact-btn whatsapp"><svg viewBox="0 0 24 24"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>Partner Office</div>
                 </div>
               </div>
               <div class="phone-tabbar">
-                <div class="phone-tab"><svg viewBox="0 0 24 24"><path d="M4 11l8-7 8 7M6 10v10h5v-6h2v6h5V10"/></svg><span>Home</span></div>
-                <div class="phone-tab"><svg viewBox="0 0 24 24"><path d="M3 12h4l2 6 4-14 2 8h6"/></svg><span>Activity</span></div>
-                <div class="phone-tab active"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 8v8M8 12h8"/></svg><span>New</span></div>
-                <div class="phone-tab"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg><span>Calendar</span></div>
-                <div class="phone-tab"><svg viewBox="0 0 24 24"><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4M10 17l5-5-5-5M15 12H3"/></svg><span>Profile</span></div>
+                <div class="phone-tab" role="tab" tabindex="0" aria-selected="false"><svg viewBox="0 0 24 24"><path d="M4 11l8-7 8 7M6 10v10h5v-6h2v6h5V10"/></svg><span>Home</span></div>
+                <div class="phone-tab" role="tab" tabindex="0" aria-selected="false"><svg viewBox="0 0 24 24"><path d="M3 12h4l2 6 4-14 2 8h6"/></svg><span>Activity</span></div>
+                <div class="phone-tab active" role="tab" tabindex="0" aria-selected="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 8v8M8 12h8"/></svg><span>New</span></div>
+                <div class="phone-tab" role="tab" tabindex="0" aria-selected="false"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg><span>Calendar</span></div>
+                <div class="phone-tab" role="tab" tabindex="0" aria-selected="false"><svg viewBox="0 0 24 24"><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4M10 17l5-5-5-5M15 12H3"/></svg><span>Profile</span></div>
               </div>
             </div>
           </div>
@@ -2005,135 +3254,179 @@ html{scroll-padding-top:var(--nav-height) !important;}
     </div>
 
     <!-- Activity -->
-    <div class="tour-block reveal">
+    <div class="tour-block reveal activity-showcase">
       <div class="tour-head">
         <h3>Activity</h3>
-        
+        <span class="refcode">LIVE WORKFLOW · ACTIVITY</span>
       </div>
       <div class="tour-inline">
+
+        <!-- Enterprise Activity -->
         <div class="workspace-shell-wrap">
           <div class="tour-role"><span class="tag enterprise">Enterprise</span> Web workspace</div>
-          <div class="workspace-shell">
-            <div class="workspace-topbar"><span class="wdot"></span><span class="wdot"></span><span class="wdot"></span>
-              <span class="wlabel">navegait.com/institution/activity</span></div>
-            <div class="workspace-band enterprise">Enterprise workspace — Partner engagements</div>
-            <div class="workspace-nav">
-              <div class="wnav-tab"><svg viewBox="0 0 24 24"><path d="M4 11l8-7 8 7M6 10v10h5v-6h2v6h5V10"/></svg><span>Home</span></div>
-              <div class="wnav-tab active"><svg viewBox="0 0 24 24"><path d="M3 12h4l2 6 4-14 2 8h6"/></svg><span>Activity</span></div>
-              <div class="wnav-tab"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 8v8M8 12h8"/></svg><span>New request</span></div>
-              <div class="wnav-tab"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg><span>Calendar</span></div>
-              <div class="wnav-tab"><svg viewBox="0 0 24 24"><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4M10 17l5-5-5-5M15 12H3"/></svg><span>Profile</span></div>
+          <div class="workspace-shell activity-workspace">
+            <div class="workspace-topbar">
+              <span class="wdot"></span><span class="wdot"></span><span class="wdot"></span>
+              <span class="mock-brand">Enterprise Workspace</span>
+              <span class="wlabel">app.navegait.com/workspace/activity</span>
             </div>
-            <div class="workspace-body">
-              <div class="wstats">
-                <div class="wstat"><b>18</b><span>Requests submitted</span><em>6 this week</em></div>
-                <div class="wstat"><b>14</b><span>Responses received</span><em>5 awaiting reply</em></div>
-                <div class="wstat"><b>11</b><span>Engage closed</span><em>↑ 14% vs last month</em></div>
-                <div class="wstat"><b>1.6 days</b><span>Avg. partner response</span><em class="down">↓ 0.3d vs last month</em></div>
+            <div class="workspace-band enterprise">
+              <span>Activity</span>
+              <small>Requests · Partners · Partner Office</small>
+            </div>
+            <div class="workspace-nav">
+              <div class="wnav-tab" role="tab" tabindex="0" aria-selected="false"><svg viewBox="0 0 24 24"><path d="M4 11l8-7 8 7M6 10v10h5v-6h2v6h5V10"/></svg><span>Home</span></div>
+              <div class="wnav-tab active" role="tab" tabindex="0" aria-selected="true"><svg viewBox="0 0 24 24"><path d="M3 12h4l2 6 4-14 2 8h6"/></svg><span>Activity</span></div>
+              <div class="wnav-tab" role="tab" tabindex="0" aria-selected="false"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 8v8M8 12h8"/></svg><span>New request</span></div>
+              <div class="wnav-tab" role="tab" tabindex="0" aria-selected="false"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg><span>Calendar</span></div>
+              <div class="wnav-tab" role="tab" tabindex="0" aria-selected="false"><svg viewBox="0 0 24 24"><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4M10 17l5-5-5-5M15 12H3"/></svg><span>Profile</span></div>
+            </div>
+
+            <div class="workspace-body activity-body">
+              <div class="activity-heading">
+                <div>
+                  <b>Recent activity</b>
+                  <span>Track requests, decisions and delivery milestones in one place.</span>
+                </div>
+                <button class="activity-action" type="button">＋ New request</button>
               </div>
 
-              <div class="activity-tools" role="search" aria-label="Search activity requests">
-                <input class="activity-search" type="search" placeholder="Search ticket #, request subject or context…" aria-label="Search by ticket, request subject or context">
-                <select class="activity-filter" aria-label="Filter by request type">
-                  <option value="all">All request types</option>
-                  <option value="csr">Academic / Industry</option>
-                  <option value="marcom">Industry Engagement</option>
-                  <option value="creative">Workshops &amp; Projects</option>
-                  <option value="partner">Partner Discovery</option>
-                  <option value="analytics">Outcomes &amp; Reporting</option>
+              <div class="activity-summary">
+                <div><b>18</b><span>Open</span></div>
+                <div><b>6</b><span>Awaiting action</span></div>
+                <div><b>12</b><span>Completed</span></div>
+                <div><b>1.6d</b><span>Avg. response</span></div>
+              </div>
+
+              <div class="activity-toolbar">
+                <div class="activity-searchbox">
+                  <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="6.5"/><path d="m16 16 5 5"/></svg>
+                  <input data-activity-search-web type="search" placeholder="Search requests, partners or updates…" aria-label="Search activity">
+                </div>
+                <select data-activity-status-web aria-label="Filter activity status">
+                  <option value="">All status</option>
+                  <option>Requested</option><option>In Review</option><option>In Production</option>
+                  <option>QC</option><option>Delivered</option>
                 </select>
-                <button class="activity-clear" type="button">Clear</button>
+                <button class="activity-filter-button" type="button">Filter</button>
               </div>
-              <div class="activity-result-count" aria-live="polite">6 requests shown</div>
 
-              <div class="wtwocol activity-results">
-                <div class="wpanel">
-                  <h5><span class="wactivity-pill submitted">Submitted</span> requests</h5>
-                  <ul class="wlist activity-list">
-                    <li class="activity-record" data-type="partner" data-search="REQ-2026-0184 campaign partner search CSR sustainability launch community partners">
-                      <div><b>Industry partner search</b><div class="activity-item-meta"><span class="request-id">REQ-2026-0184</span><small>Partner Discovery · Campus career showcase</small></div></div><span>Today</span>
-                    </li>
-                    <li class="activity-record" data-type="csr" data-search="REQ-2026-0185 partner due diligence CSR campaign partners sustainability">
-                      <div><b>Partner profile review</b><div class="activity-item-meta"><span class="request-id">REQ-2026-0185</span><small>Academic / Industry · Partner + sponsor opportunity</small></div></div><span>Yesterday</span>
-                    </li>
-                    <li class="activity-record" data-type="marcom" data-search="REQ-2026-0186 launch campaign brief direct enterprise request office follow-up">
-                      <div><b>Engagement brief</b><div class="activity-item-meta"><span class="request-id">REQ-2026-0186</span><small>Industry Engagement · Direct enterprise request</small></div></div><span>2d ago</span>
-                    </li>
-                  </ul>
+              <div class="activity-feed">
+                <div class="activity-date">TODAY</div>
+
+                <div class="activity-item">
+                  <div class="activity-icon request"><svg viewBox="0 0 24 24"><path d="M6 3h9l4 4v14H6z"/><path d="M14 3v5h5M9 13h6M9 17h4"/></svg></div>
+                  <div class="activity-copy">
+                    <b>500 product boxes · Pune</b>
+                    <span>Request submitted to Packaging partner</span>
+                    <small>REQ-0842 · Enterprise → Partner · 2h ago</small>
+                  </div>
+                  <span class="activity-state requested">Requested</span>
                 </div>
-                <div class="wpanel">
-                  <h5><span class="wactivity-pill received">Received</span> partner responses</h5>
-                  <ul class="wlist activity-list">
-                    <li class="activity-record" data-type="csr" data-search="REQ-2026-0187 proposal ecoserve foundation sustainability delivery programme">
-                      <div><b>Proposal — Enterprise Partner</b><div class="activity-item-meta"><span class="request-id">REQ-2026-0187</span><small>Academic / Industry · Sponsored engagement</small></div></div><span>2h ago</span>
-                    </li>
-                    <li class="activity-record" data-type="creative" data-search="REQ-2026-0188 creative web update sustainability campaign">
-                      <div><b>Workshop / project update</b><div class="activity-item-meta"><span class="request-id">REQ-2026-0188</span><small>Workshops &amp; Projects · Sponsored campus programme</small></div></div><span>20h ago</span>
-                    </li>
-                    <li class="activity-record" data-type="analytics" data-search="REQ-2026-0189 campaign analytics pack submitted review web analytics">
-                      <div><b>Engagement outcomes pack</b><div class="activity-item-meta"><span class="request-id">REQ-2026-0189</span><small>Outcomes &amp; Reporting · Sponsor + engagement outcomes</small></div></div><span>1d ago</span>
-                    </li>
-                  </ul>
+
+                <div class="activity-item">
+                  <div class="activity-icon review"><svg viewBox="0 0 24 24"><path d="M4 12h16M12 4v16"/><circle cx="12" cy="12" r="8"/></svg></div>
+                  <div class="activity-copy">
+                    <b>Office signage · Artwork approval</b>
+                    <span>Artwork approved by Enterprise team</span>
+                    <small>REQ-0837 · Signage partner · 5h ago</small>
+                  </div>
+                  <span class="activity-state approved">Approved</span>
+                </div>
+
+                <div class="activity-item">
+                  <div class="activity-icon qc"><svg viewBox="0 0 24 24"><path d="m5 12 4 4L19 6"/></svg></div>
+                  <div class="activity-copy">
+                    <b>Employee welcome kits</b>
+                    <span>QC evidence submitted for review</span>
+                    <small>REQ-0829 · Merchandise partner · 1d ago</small>
+                  </div>
+                  <span class="activity-state qc">QC</span>
+                </div>
+
+                <div class="activity-date">EARLIER</div>
+
+                <div class="activity-item">
+                  <div class="activity-icon delivered"><svg viewBox="0 0 24 24"><path d="M3 7h11v10H3zM14 10h4l3 3v4h-7z"/><circle cx="7" cy="18" r="2"/><circle cx="18" cy="18" r="2"/></svg></div>
+                  <div class="activity-copy">
+                    <b>Event backdrop · Delivery</b>
+                    <span>Delivered and closed by Partner Office</span>
+                    <small>REQ-0816 · Partner Office · 2d ago</small>
+                  </div>
+                  <span class="activity-state delivered">Delivered</span>
                 </div>
               </div>
-              <div class="activity-empty">No requests match the current search or filter.</div>
             </div>
           </div>
+          <div class="tour-caption">Enterprise web — activity feed, filters and workflow status</div>
         </div>
+
+        <!-- Partner Activity -->
         <div class="phone-col">
-          <div class="tour-role"><span class="tag partner">Institution / College</span> Mobile app</div>
-          <div class="phone-mock" aria-hidden="true">
+          <div class="tour-role"><span class="tag partner">Partner</span> Mobile workspace</div>
+          <div class="phone-mock activity-phone" aria-hidden="true">
             <div class="phone-mock-inner">
               <div class="phone-mock-notch"></div>
               <div class="phone-appbar">
+                <div class="mock-brand">Partner Workspace</div>
                 <span class="app-title">Activity</span>
-                <span class="app-status"><span class="dot"></span> Education–Industry workspace synced</span>
+                <span class="app-status"><span class="dot"></span> Synced</span>
               </div>
-              <div class="phone-body">
-                <div class="phone-segment">
-                  <div class="phone-seg-btn active">Submitted (9)</div>
-                  <div class="phone-seg-btn">Received (5)</div>
-                </div>
-                <input class="activity-search" type="search" placeholder="Search ticket #, subject or context…" aria-label="Search mobile activity">
-                <select class="activity-filter" aria-label="Filter mobile activity by request type">
-                  <option value="all">All request types</option>
-                  <option value="csr">Academic / Industry</option>
-                  <option value="marcom">Industry Engagement</option>
-                  <option value="creative">Workshops &amp; Projects</option>
-                  <option value="partner">Partner Discovery</option>
-                  <option value="analytics">Outcomes &amp; Reporting</option>
-                </select>
-                <div class="activity-result-count" aria-live="polite">3 requests shown</div>
 
-                <div class="phone-card activity-record" data-type="csr" data-search="REQ-2026-0184 CSR campaign request sustainability">
-                  <div class="pc-time">TODAY · <span class="request-id">REQ-2026-0184</span></div>
-                  <div class="pc-msg">Enterprise project request</div>
-                  <div class="pc-sub">Sent to Engaged enterprise · Academic / Industry</div>
+              <div class="phone-body activity-mobile-body">
+                <div class="mobile-page-intro">
+                  <b>Stay on top of work</b>
+                  <span>Requests, updates and next actions</span>
                 </div>
-                <div class="phone-card activity-record" data-type="marcom" data-search="REQ-2026-0186 sustainability campaign proposal marketing communications">
-                  <div class="pc-time">YESTERDAY · <span class="request-id">REQ-2026-0186</span></div>
-                  <div class="pc-msg">Sustainability campaign proposal</div>
-                  <div class="pc-sub">Sent to Engaged enterprise · Industry Engagement</div>
-                  <span class="pc-status needs">IN REVIEW</span>
+
+                <div class="phone-segment">
+                  <div class="phone-seg-btn active">My work <b>6</b></div>
+                  <div class="phone-seg-btn">Updates <b>9</b></div>
                 </div>
-                <div class="phone-card activity-record" data-type="creative" data-search="REQ-2026-0188 creative impact evidence campaign">
-                  <div class="pc-time">3D AGO · <span class="request-id">REQ-2026-0188</span></div>
-                  <div class="pc-msg">Creative / impact evidence</div>
-                  <div class="pc-sub">Submitted to Engaged enterprise · Workshops &amp; Projects</div>
-                  <span class="pc-status done">DONE</span>
+
+                <div class="mobile-search">
+                  <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="6.5"/><path d="m16 16 5 5"/></svg>
+                  <span>Search activity</span>
                 </div>
-                <div class="activity-empty">No requests match the current search or filter.</div>
+
+                <div class="mobile-activity-date">TODAY</div>
+
+                <div class="phone-activity-result featured">
+                  <div class="mobile-result-top">
+                    <span class="mobile-status requested">REQUESTED</span><span>2h ago</span>
+                  </div>
+                  <b>500 product boxes</b>
+                  <small>REQ-0842 · Packaging · Enterprise</small>
+                  <div class="mobile-result-next"><span>Next</span> Review brief &amp; respond</div>
+                </div>
+
+                <div class="phone-activity-result">
+                  <div class="mobile-result-top">
+                    <span class="mobile-status qc">QC</span><span>1d ago</span>
+                  </div>
+                  <b>Employee welcome kits</b>
+                  <small>REQ-0829 · QC evidence requested</small>
+                </div>
+
+                <div class="phone-activity-result">
+                  <div class="mobile-result-top">
+                    <span class="mobile-status delivered">DELIVERED</span><span>2d ago</span>
+                  </div>
+                  <b>Event backdrop</b>
+                  <small>REQ-0816 · Closed by Partner Office</small>
+                </div>
               </div>
+
               <div class="phone-tabbar">
-                <div class="phone-tab"><svg viewBox="0 0 24 24"><path d="M4 11l8-7 8 7M6 10v10h5v-6h2v6h5V10"/></svg><span>Home</span></div>
-                <div class="phone-tab active"><svg viewBox="0 0 24 24"><path d="M3 12h4l2 6 4-14 2 8h6"/></svg><span>Activity</span></div>
-                <div class="phone-tab"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 8v8M8 12h8"/></svg><span>New</span></div>
-                <div class="phone-tab"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg><span>Calendar</span></div>
-                <div class="phone-tab"><svg viewBox="0 0 24 24"><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4M10 17l5-5-5-5M15 12H3"/></svg><span>Profile</span></div>
+                <div class="phone-tab" role="tab" tabindex="0" aria-selected="false"><svg viewBox="0 0 24 24"><path d="M4 11l8-7 8 7M6 10v10h5v-6h2v6h5V10"/></svg><span>Home</span></div>
+                <div class="phone-tab active" role="tab" tabindex="0" aria-selected="true"><svg viewBox="0 0 24 24"><path d="M3 12h4l2 6 4-14 2 8h6"/></svg><span>Activity</span></div>
+                <div class="phone-tab" role="tab" tabindex="0" aria-selected="false"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 8v8M8 12h8"/></svg><span>New</span></div>
+                <div class="phone-tab" role="tab" tabindex="0" aria-selected="false"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg><span>Calendar</span></div>
+                <div class="phone-tab" role="tab" tabindex="0" aria-selected="false"><svg viewBox="0 0 24 24"><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4M10 17l5-5-5-5M15 12H3"/></svg><span>Profile</span></div>
               </div>
             </div>
           </div>
-          <div class="tour-caption">Enterprise web · Partner mobile — Activity tab</div>
+          <div class="tour-caption">Partner mobile — personal work queue and actionable updates</div>
         </div>
       </div>
     </div>
@@ -2142,21 +3435,21 @@ html{scroll-padding-top:var(--nav-height) !important;}
     <div class="tour-block reveal">
       <div class="tour-head">
         <h3>Calendar</h3>
-        
+        <span class="refcode">FILE — EPX/ENT/0084 · MAY 2026</span>
       </div>
       <div class="tour-inline">
         <div class="workspace-shell-wrap">
           <div class="tour-role"><span class="tag enterprise">Enterprise</span> Web workspace</div>
           <div class="workspace-shell">
             <div class="workspace-topbar"><span class="wdot"></span><span class="wdot"></span><span class="wdot"></span>
-              <span class="wlabel">navegait.com/institution/calendar</span></div>
-            <div class="workspace-band enterprise">Enterprise workspace — Partner engagements</div>
+              <span class="mock-brand">Enterprise Workspace</span><span class="wlabel">app.navegait.com/workspace/calendar</span></div>
+            <div class="workspace-band enterprise"><span>Enterprise workspace</span><small>Requests · Partners · Partner Office</small></div>
             <div class="workspace-nav">
-              <div class="wnav-tab"><svg viewBox="0 0 24 24"><path d="M4 11l8-7 8 7M6 10v10h5v-6h2v6h5V10"/></svg><span>Home</span></div>
-              <div class="wnav-tab"><svg viewBox="0 0 24 24"><path d="M3 12h4l2 6 4-14 2 8h6"/></svg><span>Activity</span></div>
-              <div class="wnav-tab"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 8v8M8 12h8"/></svg><span>New request</span></div>
-              <div class="wnav-tab active"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg><span>Calendar</span></div>
-              <div class="wnav-tab"><svg viewBox="0 0 24 24"><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4M10 17l5-5-5-5M15 12H3"/></svg><span>Profile</span></div>
+              <div class="wnav-tab" role="tab" tabindex="0" aria-selected="false"><svg viewBox="0 0 24 24"><path d="M4 11l8-7 8 7M6 10v10h5v-6h2v6h5V10"/></svg><span>Home</span></div>
+              <div class="wnav-tab" role="tab" tabindex="0" aria-selected="false"><svg viewBox="0 0 24 24"><path d="M3 12h4l2 6 4-14 2 8h6"/></svg><span>Activity</span></div>
+              <div class="wnav-tab" role="tab" tabindex="0" aria-selected="false"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 8v8M8 12h8"/></svg><span>New request</span></div>
+              <div class="wnav-tab active" role="tab" tabindex="0" aria-selected="true"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg><span>Calendar</span></div>
+              <div class="wnav-tab" role="tab" tabindex="0" aria-selected="false"><svg viewBox="0 0 24 24"><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4M10 17l5-5-5-5M15 12H3"/></svg><span>Profile</span></div>
             </div>
             <div class="workspace-body">
               <div class="wtwocol" style="grid-template-columns:1.15fr .85fr">
@@ -2181,10 +3474,10 @@ html{scroll-padding-top:var(--nav-height) !important;}
                 <div class="wpanel">
                   <h5>Upcoming</h5>
                   <ul class="wlist">
-                    <li><div><b>Partner + sponsor review</b><small>Campus engagement package</small></div><span>9 May</span></li>
-                    <li><div><b>Industry showcase review</b><small>Enterprise sponsor + college team</small></div><span>18 May</span></li>
-                    <li><div><b>Brand activation review</b><small>Signage, digital and on-site visibility</small></div><span>21 May</span></li>
-                    <li><div><b>Campus showcase</b><small>Sponsor activation + employer engagement</small></div><span>25 May</span></li>
+                    <li><div><b>Partner Office review call</b><small>Q1 performance — top 5 vendors</small></div><span>9 May</span></li>
+                    <li><div><b>Contract renewal deadline</b><small>XYZ Logistics — supply chain</small></div><span>18 May</span></li>
+                    <li><div><b>Partner review</b><small>with Packaging partner</small></div><span>21 May</span></li>
+                    <li><div><b>Product boxes — production</b><small>Packaging partner — milestone due</small></div><span>25 May</span></li>
                   </ul>
                 </div>
               </div>
@@ -2192,13 +3485,13 @@ html{scroll-padding-top:var(--nav-height) !important;}
           </div>
         </div>
         <div class="phone-col">
-          <div class="tour-role"><span class="tag partner">Institution / College</span> Mobile app</div>
+          <div class="tour-role"><span class="tag partner">Partner</span> Mobile workspace</div>
           <div class="phone-mock" aria-hidden="true">
             <div class="phone-mock-inner">
               <div class="phone-mock-notch"></div>
               <div class="phone-appbar">
                 <span class="app-title">Calendar</span>
-                <span class="app-status"><span class="dot"></span> Education–Industry workspace synced</span>
+                <span class="app-status"><span class="dot"></span> Synced with workspace</span>
               </div>
               <div class="phone-body">
                 <div class="phone-week-strip">
@@ -2213,22 +3506,22 @@ html{scroll-padding-top:var(--nav-height) !important;}
                 <div class="phone-section-label">Upcoming</div>
                 <div class="phone-card">
                   <div class="pc-time">21 MAY · 3:00 PM</div>
-                  <div class="pc-msg">Industry engagement + sponsor check-in</div>
-                  <div class="pc-sub">with enterprise engagement lead</div>
+                  <div class="pc-msg">Quarterly check-in</div>
+                  <div class="pc-sub">with ABC Corp account lead</div>
                 </div>
                 <div class="phone-card">
                   <div class="pc-time">25 MAY</div>
-                  <div class="pc-msg">Campus showcase + sponsor activation</div>
-                  <div class="pc-sub">Enterprise sponsor — deliverables due</div>
+                  <div class="pc-msg">Social media campaign</div>
+                  <div class="pc-sub">ABC Corp — milestone due</div>
                   <span class="pc-status needs">DUE SOON</span>
                 </div>
               </div>
               <div class="phone-tabbar">
-                <div class="phone-tab"><svg viewBox="0 0 24 24"><path d="M4 11l8-7 8 7M6 10v10h5v-6h2v6h5V10"/></svg><span>Home</span></div>
-                <div class="phone-tab"><svg viewBox="0 0 24 24"><path d="M3 12h4l2 6 4-14 2 8h6"/></svg><span>Activity</span></div>
-                <div class="phone-tab"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 8v8M8 12h8"/></svg><span>New</span></div>
-                <div class="phone-tab active"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg><span>Calendar</span></div>
-                <div class="phone-tab"><svg viewBox="0 0 24 24"><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4M10 17l5-5-5-5M15 12H3"/></svg><span>Profile</span></div>
+                <div class="phone-tab" role="tab" tabindex="0" aria-selected="false"><svg viewBox="0 0 24 24"><path d="M4 11l8-7 8 7M6 10v10h5v-6h2v6h5V10"/></svg><span>Home</span></div>
+                <div class="phone-tab" role="tab" tabindex="0" aria-selected="false"><svg viewBox="0 0 24 24"><path d="M3 12h4l2 6 4-14 2 8h6"/></svg><span>Activity</span></div>
+                <div class="phone-tab" role="tab" tabindex="0" aria-selected="false"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 8v8M8 12h8"/></svg><span>New</span></div>
+                <div class="phone-tab active" role="tab" tabindex="0" aria-selected="true"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg><span>Calendar</span></div>
+                <div class="phone-tab" role="tab" tabindex="0" aria-selected="false"><svg viewBox="0 0 24 24"><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4M10 17l5-5-5-5M15 12H3"/></svg><span>Profile</span></div>
               </div>
             </div>
           </div>
@@ -2237,33 +3530,15 @@ html{scroll-padding-top:var(--nav-height) !important;}
       </div>
     </div>
 
-    <!-- Event branding, advertising & sponsorship workspace -->
-    <div class="sponsor-workspace reveal">
-      <div class="sponsor-workspace-copy">
-        <span class="eyebrow teal">Event visibility &amp; commercial collaboration</span>
-        <h3>Make event participation visible — and measurable.</h3>
-        <p>When an institution/college and an enterprise are already engaged, either side can propose branding, advertising or sponsorship directly. When they need help, the Partner Office can source counterparties, package inventory, coordinate deliverables and track value.</p>
-        <div class="sponsor-routes"><span>Institution → engaged enterprise</span><span>Enterprise → engaged institution</span><span>Either side → Partner Office</span></div>
-      </div>
-      <div class="sponsor-board">
-        <div class="sponsor-board-head"><b>Campus Industry Showcase</b><span>25 May · Sponsored</span></div>
-        <div class="sponsor-line"><span>Title / co-sponsor</span><b>1 slot</b><em>Open</em></div>
-        <div class="sponsor-line"><span>On-site branding</span><b>6 placements</b><em>3 booked</em></div>
-        <div class="sponsor-line"><span>Digital promotion</span><b>3 assets</b><em>2 approved</em></div>
-        <div class="sponsor-line"><span>Employer activation</span><b>2 booths</b><em>1 booked</em></div>
-        <div class="sponsor-line"><span>Post-event visibility</span><b>Outcome pack</b><em>Tracked</em></div>
-      </div>
-    </div>
-
     <!-- Platform-wide features -->
 
     <div class="feature-strip reveal">
-      <div class="feature-chip"><div class="ico"><svg viewBox="0 0 24 24"><path d="M12 2l3 7h7l-5.5 4.5L18.5 21 12 16.5 5.5 21l2-7.5L2 9h7z"/></svg></div><h5>Smart matching</h5><p>Partner matching across institutions &amp; enterprise partners</p></div>
-      <div class="feature-chip"><div class="ico"><svg viewBox="0 0 24 24"><path d="M21 15a4 4 0 0 1-4 4H8l-5 3V6a4 4 0 0 1 4-4h10a4 4 0 0 1 4 4z"/></svg></div><h5>Communication hub</h5><p>Partner, institution &amp; engagement communication</p></div>
-      <div class="feature-chip"><div class="ico"><svg viewBox="0 0 24 24"><path d="M6 2h9l5 5v15H6z"/><path d="M15 2v5h5"/></svg></div><h5>Document repository</h5><p>Proposals, agreements &amp; engagement records</p></div>
-      <div class="feature-chip"><div class="ico"><svg viewBox="0 0 24 24"><path d="M3 20h18M6 20V10M12 20V4M18 20v-7"/></svg></div><h5>Reports &amp; analytics</h5><p>Engagement, outcome &amp; partner insights</p></div>
-      <div class="feature-chip"><div class="ico"><svg viewBox="0 0 24 24"><path d="M12 2l8 4v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/></svg></div><h5>Security &amp; compliance</h5><p>Role-based access, audit &amp; governance control</p></div>
-      <div class="feature-chip sponsor-feature"><div class="ico"><svg viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h10"/><circle cx="18" cy="17" r="3"/></svg></div><h5>Event visibility</h5><p>Branding, advertising, sponsorship &amp; activation tracking</p></div>
+      <div class="feature-chip"><div class="ico"><svg viewBox="0 0 24 24"><path d="M12 2l3 7h7l-5.5 4.5L18.5 21 12 16.5 5.5 21l2-7.5L2 9h7z"/></svg></div><h5>Smart matching</h5><p>Partner recommendations based on capability and context</p></div>
+      <div class="feature-chip"><div class="ico"><svg viewBox="0 0 24 24"><path d="M21 15a4 4 0 0 1-4 4H8l-5 3V6a4 4 0 0 1 4-4h10a4 4 0 0 1 4 4z"/></svg></div><h5>Communication hub</h5><p>Chat, updates &amp; work notices</p></div>
+      <div class="feature-chip"><div class="ico"><svg viewBox="0 0 24 24"><path d="M6 2h9l5 5v15H6z"/><path d="M15 2v5h5"/></svg></div><h5>Document repository</h5><p>Centralized, secure document record</p></div>
+      <div class="feature-chip"><div class="ico"><svg viewBox="0 0 24 24"><path d="M9 11l3 3 8-8"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg></div><h5>Artwork approval &amp; workflows</h5><p>Approval routing and escalations</p></div>
+      <div class="feature-chip"><div class="ico"><svg viewBox="0 0 24 24"><path d="M3 20h18M6 20V10M12 20V4M18 20v-7"/></svg></div><h5>Reports &amp; analytics</h5><p>Live insights and reports</p></div>
+      <div class="feature-chip"><div class="ico"><svg viewBox="0 0 24 24"><path d="M12 2l8 4v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/></svg></div><h5>Security &amp; compliance</h5><p>Role-based access and audit controls</p></div>
     </div>
   </div>
 </section>
@@ -2272,39 +3547,39 @@ html{scroll-padding-top:var(--nav-height) !important;}
 <section id="waitlist">
   <div class="wrap pilot-grid">
     <div class="reveal pilot-copy">
-      <div class="eyebrow">NEXT STEP</div>
-      <h2>Join the NAVEGAIT Pilot</h2>
-      <p class="lead">We’re shaping the first NAVEGAIT pilot with colleges/institutions and enterprise partners. Tell us what you want to build; we’ll shape the right platform and Partner Office model.</p>
+      <div class="eyebrow">Chennai &amp; Bengaluru pilot</div>
+      <h2>Save your enterprise's spot.</h2>
+      <p class="lead">We're onboarding founding enterprises in small batches. Leave your details and a Partner Office lead will reach out — you'll join the cohort already shaping the platform.</p>
       <div class="pilot-list">
         <div><svg viewBox="0 0 24 24"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="9"/></svg> Priority access during the founding pilot</div>
-        <div><svg viewBox="0 0 24 24"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="9"/></svg> Personal onboarding with the NAVEGAIT platform and Partner Office</div>
-              </div>
-          </div>
+        <div><svg viewBox="0 0 24 24"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="9"/></svg> Partner Office support when needed</div>
+        <div><svg viewBox="0 0 24 24"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="9"/></svg> Free to join — no cost, no obligation</div>
+      </div>
+      <div class="pilot-counter"><b>Founding enterprise pilot in progress</div>
+    </div>
 
     <div class="reveal card form-card">
       <h3>Request your invite</h3>
-      <p>Three details and you're on the list.</p>
+      <p>Three details. We’ll follow up.</p>
       <form onsubmit="event.preventDefault(); this.querySelector('.form-note').style.display='block';">
         <div class="field"><label for="fname">Your name</label><input id="fname" type="text" placeholder="Full name" required></div>
-        <div class="field"><label for="fcompany">Institution / Enterprise</label><input id="fcompany" type="text" placeholder="College, university or enterprise name" required></div>
+        <div class="field"><label for="fcompany">Company</label><input id="fcompany" type="text" placeholder="Company name" required></div>
         <div class="field"><label for="femail">Work email</label><input id="femail" type="email" placeholder="you@company.com" required></div>
         <div class="field">
           <label for="fneed">What would you most like help with? <span style="font-weight:400;color:var(--ink-faint)">optional</span></label>
           <select id="fneed">
             <option value="">Choose one</option>
-            <option>Education–Industry engagement</option>
-            <option>Internships, projects &amp; hiring pathways</option>
-            <option>Event branding, advertising &amp; sponsorships</option>
-            <option>Event / campus visibility and activations</option>
-            <option>Partner discovery, coordination &amp; governance</option>
-            <option>Becoming an enterprise partner</option>
-            <option>Becoming an institution / college partner</option>
+            <option>Execution partner discovery &amp; onboarding</option>
+            <option>Governance, risk &amp; compliance</option>
+            <option>Contract &amp; renewal management</option>
+            <option>Performance &amp; spend visibility</option>
+            <option>Becoming an enterprise-ready partner</option>
             <option>Something else</option>
           </select>
         </div>
-        <button class="btn primary block" type="submit">Request your invite →</button>
+        <button class="btn primary block" type="submit">Request access →</button>
       </form>
-      <p class="form-note" style="display:none">Thanks — a Partner Office lead will be in touch shortly.</p>
+      <p class="form-note" style="display:none">Thanks — a NAVEGAIT lead will follow up shortly.</p>
     </div>
   </div>
 </section>
@@ -2313,15 +3588,23 @@ html{scroll-padding-top:var(--nav-height) !important;}
 <section id="voices" class="tinted">
   <div class="wrap">
     <div class="section-head reveal">
-      <div class="eyebrow">WHY NAVEGAIT</div>
-      <h2>Why NAVEGAIT</h2>
-      <p class="lead">NAVEGAIT replaces scattered emails, contacts and manual coordination with one structured engagement environment.</p>
+      <div class="eyebrow">Early conversations</div>
+      <h2>What procurement leads &amp; partners are telling us.</h2>
+      <p class="lead">NAVEGAIT EPX is pre-launch — these are paraphrased reactions from discovery conversations with the enterprise and partner teams we're designing for.</p>
     </div>
     <div class="grid grid-3 testimonial-grid reveal">
-      <div class="card testimonial-card"><p class="quote">"We want stronger industry connections, but each engagement is often coordinated differently. A shared record would make relationships easier to manage."</p><div class="testimonial-attrib"><span class="t-avatar">IN</span><div><b>Institution</b><span>Engagement need</span></div></div></div>
-      <div class="card testimonial-card"><p class="quote">"We have expertise, projects and practitioners to contribute, but not a dedicated education-relations team. Structured access would make participation easier."</p><div class="testimonial-attrib"><span class="t-avatar">SM</span><div><b>Enterprise</b><span>Partnership opportunity</span></div></div></div>
-      <div class="card testimonial-card"><p class="quote">"Start with one activity, learn what works, and build the relationship. The platform should carry the history forward."</p><div class="testimonial-attrib"><span class="t-avatar">PO</span><div><b>Partner Office</b><span>Operating model</span></div></div></div>
-      <div class="card testimonial-card"><p class="quote">"A campus event can be more valuable when the right employer or brand partner can sponsor, activate and engage — without creating another coordination layer."</p><div class="testimonial-attrib"><span class="t-avatar">EV</span><div><b>Event / Engagement Lead</b><span>Visibility opportunity</span></div></div></div>
+      <div class="card testimonial-card">
+        <p class="quote">"Every quarter we re-vet the same twenty vendors from scratch because nothing carries over. A shared record both sides can see would cut that work in half."</p>
+        <div class="testimonial-attrib"><span class="t-avatar">PL</span><div><b>Procurement Lead</b><span>Mid-size manufacturing enterprise</span></div></div>
+      </div>
+      <div class="card testimonial-card">
+        <p class="quote">"We can deliver great work, but proving we're 'enterprise-ready' on paper takes longer than the project itself. A performance record that follows us between clients would change that."</p>
+        <div class="testimonial-attrib"><span class="t-avatar">SM</span><div><b>Founder</b><span>Creative &amp; digital partner</span></div></div>
+      </div>
+      <div class="card testimonial-card">
+        <p class="quote">"Governance is the part nobody wants to own. If compliance and risk were built into the workflow instead of bolted on at audit time, it would save us weeks a year."</p>
+        <div class="testimonial-attrib"><span class="t-avatar">RM</span><div><b>Risk &amp; Compliance Manager</b><span>Regional banking enterprise</span></div></div>
+      </div>
     </div>
   </div>
 </section>
@@ -2330,18 +3613,31 @@ html{scroll-padding-top:var(--nav-height) !important;}
 <section id="faq">
   <div class="wrap">
     <div class="section-head reveal">
-      <div class="eyebrow">QUESTIONS, ANSWERED</div>
-      <h2>FAQs</h2>
-      <p class="lead">NAVEGAIT is designed around the enterprise partnership lifecycle, starting with institutions and colleges.</p>
+      <div class="eyebrow">Questions, answered</div>
+      <h2>Before you reach out.</h2>
+      <p class="lead">The things enterprises and prospective partners ask us most, kept simple.</p>
     </div>
     <div class="faq-list reveal">
-      <details class="faq-item"><summary>Is NAVEGAIT a marketplace?</summary><p>NAVEGAIT is relationship infrastructure and a managed platform. It helps institutions discover enterprise partners, structure engagements, coordinate delivery and grow recurring partnerships.</p></details>
-      <details class="faq-item"><summary>Who is the initial customer?</summary><p>The initial product is focused on colleges/institutions and their enterprise partners. SMEs and service partners can be added as the network expands. Students, faculty and professionals participate in engagements but are not primary platform customers.</p></details>
-      <details class="faq-item"><summary>What is the Partner Office?</summary><p>The Partner Office is the managed layer for discovery, outreach, coordination, documentation and relationship development.</p></details>
-      <details class="faq-item"><summary>Can institutions and enterprises sponsor or brand an engagement?</summary><p>Yes. Engaged partners can manage branding, advertising or sponsorship directly, or use the Partner Office to source, package, coordinate and track it.</p></details>
-      <details class="faq-item"><summary>Can both sides approach the Partner Office?</summary><p>Yes. Institutions and enterprise partners can request introductions, opportunity development, coordination or relationship support. Existing direct relationships remain direct unless support is requested.</p></details>
-      <details class="faq-item"><summary>What happens after the first engagement?</summary><p>The engagement record carries history forward, helping one activity grow into projects, internships, visits, research, hiring or strategic partnerships.</p></details>
-      <details class="faq-item"><summary>Is NAVEGAIT live today?</summary><p>NAVEGAIT is a concept and pilot platform focused first on proving the institution–enterprise engagement model.</p></details>
+      <details class="faq-item">
+        <summary>Is NAVEGAIT EPX a marketplace or a piece of software?</summary>
+        <p>Both, together. It is a workspace enterprises and partners can use directly, with an optional Partner Office for coordinated fulfilment. NAVEGAIT keeps requests, communication, production and delivery connected without forcing every engagement through the managed service.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Will EPX book, pay or approve anything on its own?</summary>
+        <p>No. EPX Intelligence drafts and prepares — shortlists, renewal terms, risk flags — but the relevant enterprise, partner and Partner Office participants review anything that touches money, contracts or compliance before it moves.</p>
+      </details>
+      <details class="faq-item">
+        <summary>How does onboarding work for an enterprise's existing partners?</summary>
+        <p>Existing vendor and work records import in bulk, then run through the same standardized KYC, compliance and risk workflow as new partners — so you get one governed record without re-onboarding everyone from scratch.</p>
+      </details>
+      <details class="faq-item">
+        <summary>What does it cost?</summary>
+        <p>Pricing can combine platform access with optional Partner Office fulfilment services and advisory support. We're still shaping final numbers with the founding cohort — get in touch and we'll work through it together.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Where is NAVEGAIT available today?</summary>
+        <p>NAVEGAIT EPX is at concept-blueprint stage — nothing is live yet. We're building the founding team and lining up the first pilot enterprises and partners ahead of launch, starting in Chennai and Bengaluru.</p>
+      </details>
     </div>
   </div>
 </section>
@@ -2524,7 +3820,6 @@ html{scroll-padding-top:var(--nav-height) !important;}
   if(yearEl){ yearEl.textContent = new Date().getFullYear(); }
 })();
 </script>
-
 <script>
 /* ============================================================
    PRIMARY NAVIGATION VIEWPORT GUARD
@@ -2569,6 +3864,73 @@ html{scroll-padding-top:var(--nav-height) !important;}
   window.addEventListener('orientationchange', syncPrimaryNavigation, {passive:true});
 })();
 </script>
+<script>
+/* NAVEGAIT platform mockup interactions:
+   Activity search/filter works independently on web and mobile mock screens. */
+(function(){
+  function setupActivity(root, searchSel, statusSel, resultSel, emptySel, mobile){
+    var search = root.querySelector(searchSel);
+    var status = root.querySelector(statusSel);
+    var results = root.querySelectorAll(resultSel);
+    var empty = root.querySelector(emptySel);
+    if(!search || !status) return;
 
+    function apply(){
+      var q = (search.value || '').toLowerCase().trim();
+      var s = (status.value || '').toLowerCase().trim();
+      var visible = 0;
+      results.forEach(function(item){
+        var hay = ((mobile ? item.getAttribute('data-search-mobile') : item.getAttribute('data-search')) || '').toLowerCase();
+        var okQ = !q || hay.indexOf(q) !== -1;
+        var okS = !s || hay.indexOf(s) !== -1;
+        item.style.display = okQ && okS ? '' : 'none';
+        if(okQ && okS) visible++;
+      });
+      if(empty) empty.style.display = visible ? 'none' : 'block';
+    }
+    search.addEventListener('input', apply);
+    status.addEventListener('change', apply);
+  }
+
+  document.querySelectorAll('.tour-block').forEach(function(block){
+    setupActivity(block,'[data-activity-search-web]','[data-activity-status-web]','[data-activity-results-web] .activity-result','[data-activity-empty-web]',false);
+    setupActivity(block,'[data-activity-search-mobile]','[data-activity-status-mobile]','[data-search-mobile]','[data-activity-empty-mobile]',true);
+  });
+
+  /* Make routing selectors visibly meaningful inside the static mock. */
+  document.querySelectorAll('.route-box select').forEach(function(sel){
+    sel.addEventListener('change', function(){
+      var meta = sel.closest('.route-box');
+      if(!meta) return;
+      meta.setAttribute('data-route-selected','true');
+    });
+  });
+})();
+</script>
+<script>
+(function(){
+  function bindMockTabs(scope){
+    var tabs = Array.from(scope.querySelectorAll('.wnav-tab, .phone-tab'));
+    if(!tabs.length) return;
+    tabs.forEach(function(tab){
+      function activate(){
+        tabs.forEach(function(t){
+          t.classList.remove('active');
+          t.setAttribute('aria-selected','false');
+        });
+        tab.classList.add('active');
+        tab.setAttribute('aria-selected','true');
+      }
+      tab.addEventListener('click', activate);
+      tab.addEventListener('keydown', function(e){
+        if(e.key === 'Enter' || e.key === ' '){
+          e.preventDefault(); activate();
+        }
+      });
+    });
+  }
+  document.querySelectorAll('.workspace-mock,.phone-mock').forEach(bindMockTabs);
+})();
+</script>
 </body>
 </html>
