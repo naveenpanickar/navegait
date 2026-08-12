@@ -1019,7 +1019,8 @@ header{background:rgba(250,247,241,.96)}
 /* Very narrow devices (320–360px). */
 @media (max-width:360px){
   .header-actions{gap:4px}
-  .theme-toggle button{padding-inline:6px}
+  .theme-toggle{padding:2px}
+  .theme-toggle button{padding-inline:5px!important;font-size:8.5px!important}
   .brand .mark{width:30px;height:30px}
   .brand{font-size:16px}
   .hero h1{font-size:32px}
@@ -1409,7 +1410,9 @@ section{scroll-margin-top:calc(var(--nav-h) + 18px)}
   .wrap{width:min(100% - 28px,640px)}
   header{min-height:64px}
   .brand .tag{display:inline-flex !important;align-items:center;white-space:nowrap;font-size:10px;letter-spacing:.05em;margin-left:1px}
-  .header-actions .theme-toggle{display:none}
+  /* Keep theme control visible on compact/mobile headers. */
+  .header-actions .theme-toggle{display:flex!important;flex:0 0 auto;gap:1px;padding:2px}
+  .header-actions .theme-toggle button{font-size:9px!important;padding:6px 7px!important;line-height:1;min-width:0}
   .nav-pilot-cta{display:none!important}
   .hero{padding-top:34px;padding-bottom:38px}
   .hero-grid{grid-template-columns:1fr!important;gap:26px!important}
