@@ -1614,7 +1614,14 @@ section{scroll-margin-top:calc(var(--nav-h) + 18px)}
 }
 /* Touch-friendly controls */
 button,a,input,select,summary{touch-action:manipulation}
-@media (pointer:coarse){button,a,summary{min-height:44px}}
+@media (pointer:coarse){
+  button,a,summary{min-height:44px}
+  /* Icon-only theme toggle: keep the visual circle compact instead of
+     stretching to 44px tall (which distorted it into an oval). Extend
+     the actual tap target invisibly via a pseudo-element instead. */
+  .theme-toggle button{min-height:0;position:relative}
+  .theme-toggle button::after{content:'';position:absolute;inset:-8px}
+}
 
 
 /* ============================================================
