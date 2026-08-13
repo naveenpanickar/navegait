@@ -170,31 +170,30 @@ body{overflow-x:hidden}
   font-family:var(--body);
   font-weight:700;
   font-size:12px;
-  padding:7px 11px;
+  padding:8px;
   border-radius:999px;
   cursor:pointer;
   color:var(--ink-faint);
   display:flex;
   align-items:center;
   justify-content:center;
-  gap:6px;
-  min-width:68px;
+  width:32px;
+  height:32px;
   transition:background .18s ease,color .18s ease,box-shadow .18s ease;
 }
 .theme-toggle button:hover{color:var(--navy);background:rgba(255,255,255,.42)}
 [data-theme="dark"] .theme-toggle button:hover{color:#fff;background:rgba(255,255,255,.06)}
 .theme-toggle button.active{background:var(--navy);color:#fff;box-shadow:0 1px 2px rgba(0,0,0,.12)}
 .theme-icon{
-  width:14px;
-  height:14px;
-  flex:0 0 14px;
+  width:15px;
+  height:15px;
+  flex:0 0 15px;
   fill:none;
   stroke:currentColor;
   stroke-width:1.8;
   stroke-linecap:round;
   stroke-linejoin:round;
 }
-.theme-toggle button span{line-height:1}
 .menu-btn{display:none;width:42px;height:42px;border:1px solid var(--line-strong);background:var(--card);border-radius:10px;align-items:center;justify-content:center;cursor:pointer;color:var(--navy)}
 [data-theme="dark"] .menu-btn{color:#fff}
 .menu-btn span{display:block;width:18px;height:2px;background:currentColor;position:relative;transition:background .2s ease, transform .2s ease}
@@ -1116,7 +1115,7 @@ header{background:rgba(250,247,241,.96)}
   .brand{font-size:17px;min-width:0}
   .brand .tag{display:inline-flex;align-items:center;white-space:nowrap;font-size:10px;letter-spacing:.05em;margin-left:1px}
   .header-actions{gap:7px}
-  .theme-toggle button{padding:7px 9px;font-size:11px}
+  .theme-toggle button{width:30px;height:30px;padding:7px}
   .hero{padding:30px 0 46px}
   .hero h1{font-size:clamp(34px,10vw,48px)}
   .hero .lead{font-size:16px}
@@ -1143,7 +1142,7 @@ header{background:rgba(250,247,241,.96)}
   .wrap{padding-inline:16px}
   .nav{height:68px}
   .mobile-nav{top:78px;inset-block-start:78px;padding-inline:16px}
-  .header-actions .theme-toggle button{font-size:10px;padding:7px 8px;min-width:58px;gap:5px}
+  .header-actions .theme-toggle button{width:28px;height:28px;padding:6px}
   .header-actions .theme-icon{width:13px;height:13px;flex-basis:13px}
   .menu-btn{width:40px;height:40px;flex:0 0 40px}
   .hero{padding:24px 0 40px}
@@ -1186,7 +1185,7 @@ header{background:rgba(250,247,241,.96)}
 @media (max-width:360px){
   .header-actions{gap:4px}
   .theme-toggle{padding:2px}
-  .theme-toggle button{padding-inline:5px!important;font-size:8.5px!important;min-width:43px!important;gap:3px!important}
+  .theme-toggle button{width:26px!important;height:26px!important;padding:5px!important}
    .theme-toggle .theme-icon{width:11px;height:11px;flex-basis:11px}
   .brand .mark{width:30px;height:30px}
   .brand{font-size:16px}
@@ -1579,7 +1578,7 @@ section{scroll-margin-top:calc(var(--nav-h) + 18px)}
   .brand .tag{display:inline-flex !important;align-items:center;white-space:nowrap;font-size:10px;letter-spacing:.05em;margin-left:1px}
   /* Keep theme control visible on compact/mobile headers. */
   .header-actions .theme-toggle{display:flex!important;flex:0 0 auto;gap:1px;padding:2px}
-  .header-actions .theme-toggle button{font-size:9px!important;padding:6px 7px!important;line-height:1;min-width:48px!important;gap:4px}
+  .header-actions .theme-toggle button{width:28px!important;height:28px!important;padding:6px!important;line-height:1}
    .header-actions .theme-icon{width:12px;height:12px;flex-basis:12px}
   .nav-pilot-cta{display:none!important}
   .hero{padding-top:34px;padding-bottom:38px}
@@ -2783,13 +2782,11 @@ body{font-size:var(--fs-body);line-height:1.6}
             <circle cx="12" cy="12" r="4"></circle>
             <path d="M12 2v2M12 20v2M4.93 4.93l1.42 1.42M17.65 17.65l1.42 1.42M2 12h2M20 12h2M4.93 19.07l1.42-1.42M17.65 6.35l1.42-1.42"></path>
           </svg>
-          <span>Light</span>
         </button>
         <button type="button" id="darkBtn" aria-pressed="false" aria-label="Use dark theme" title="Dark theme">
           <svg class="theme-icon" viewBox="0 0 24 24" aria-hidden="true">
             <path d="M20.2 14.4A8.5 8.5 0 0 1 9.6 3.8 8.5 8.5 0 1 0 20.2 14.4Z"></path>
           </svg>
-          <span>Dark</span>
         </button>
       </div>
       <a class="btn primary nav-pilot-cta" href="#waitlist" id="navCta">Join the Pilot</a>
