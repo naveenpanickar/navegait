@@ -3778,6 +3778,38 @@ main > section:not(.hero) .chip{
 }
 </style>
 
+
+<style>
+/* MOBILE THEME TOGGLE — keep each theme control perfectly circular */
+@media (max-width: 760px){
+  .theme-toggle{
+    height:34px !important;
+    min-height:34px !important;
+    padding:2px !important;
+    gap:1px !important;
+    align-items:center !important;
+  }
+  .theme-toggle button,
+  .header-actions .theme-toggle button{
+    width:28px !important;
+    min-width:28px !important;
+    max-width:28px !important;
+    height:28px !important;
+    min-height:28px !important;
+    max-height:28px !important;
+    padding:0 !important;
+    margin:0 !important;
+    aspect-ratio:1 / 1 !important;
+    border-radius:50% !important;
+    flex:0 0 28px !important;
+    line-height:28px !important;
+    display:flex !important;
+    align-items:center !important;
+    justify-content:center !important;
+  }
+  .theme-toggle button::after{inset:-7px !important;}
+}
+</style>
 </head><body id="top">
 <a class="skip-link" href="#main-content">Skip to content</a>
 <header aria-label="NAVEGAIT primary navigation">
